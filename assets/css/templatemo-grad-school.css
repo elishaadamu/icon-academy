@@ -1669,30 +1669,14 @@ input:valid{
 #regForm {
   background-color: #ffffff;
   margin: 0px 100px 0px 130px;
-  font-family: Raleway;
   display: block;
   justify-content: center;
-  padding: 40px;
+
   width: 70%;
   min-width: 300px;
 }
 
-h1 {
-  text-align: center;  
-}
 
-input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
-}
-
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
-}
 
 /* Hide all steps by default: */
 .tab {
@@ -1700,12 +1684,11 @@ input.invalid {
 }
 
 button {
-  background-color: #04AA6D;
+  background-color: #172239;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: Raleway;
   cursor: pointer;
 }
 
@@ -1714,7 +1697,7 @@ button:hover {
 }
 
 #prevBtn {
-  background-color: #bbbbbb;
+  background-color: #69748d;
 }
 
 /* Make circles that indicate the steps of the form: */
@@ -1735,5 +1718,5 @@ button:hover {
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
-  background-color: #04AA6D;
+  background-color: #172239;
 }

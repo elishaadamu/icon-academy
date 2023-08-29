@@ -62,121 +62,110 @@ https://templatemo.com/tm-557-grad-school
         <!-- <div class="content-image">
             <img class="image-login" width="650px" height="950px" src="./assets/img/b9fcbf977b334ca1ab5dd92d74b5b81f.jpg" alt="Security man">
         </div> -->
-        <div class="content-signup">
+        <div class="content-signup col-12">
           <form id="regForm" action="/action_page.php">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
             <!-- One "tab" for each step in the form: -->
-            <div class="tab">Name:
-              <p><input placeholder="First name..." oninput="this.className = ''" name="fname" required></p>
-              <p><input placeholder="Last name..." oninput="this.className = ''" name="lname" required></p>
-              <p><input placeholder="E-mail..." oninput="this.className = ''" name="email" required></p>
-              <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-              <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-              <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-              <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+            <div class="tab"><h2>Personal Details</h2>
+              
+              <br>
+              <label for="title"><b>Student's title</b></label>
+              <select  class="form-select" name="title" id="title" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Select Title</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Sir">Sir</option>
+                <option value="Prof.">Prof.</option>
+                <option value="Dr">Dr</option>
+              </select>
+              <br>
+              <label for="first-name" class="form-label"><b>First Name</b></label>
+              <p><input placeholder="First name..." id="first-name"  class="form-control" name="fname" required></p>
+              <br>
+              <label for="surname" class="form-label"><b>Surname</b></label>
+              <p><input placeholder="Surname..." id="surname"  class="form-control" name="sname" required></p>
+              <br>
+              <label for="middle-name" class="form-label"><b>Middle Name</b></label>
+              <p><input placeholder="Middle name..." id="middle-name"  name="mname" class="form-control" required></p>
+              <br>
+              <label for="other-name" class="form-label"><b>Other Names <span class="badge bg-info">optional</span></b></label>
+              <p><input placeholder="Other name..." id="other-name"  name="oname" class="form-control"></p>
+              <br>
+              <label for="residential-address" class="form-label"><b>Residential Address</b></label>
+              <p><input placeholder="Residential Address..." id="residential-address"  name="residential-address" class="form-control" required></p>
+              <br>
+              <label for="phone-number" class="form-label"><b>Phone Number</b></label>
+              <p><input type="tel"  class="form-control" name="phone-number" id="phone-number" autocomplete="on" placeholder="Example: 08012345678"
+                title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
+              <br>
+              <label for="date-of-birth" class="form-label"><b>Date of Birth</b></label>
+              <p><input type="date" id="date-of-birth" placeholder="Date of Birth..."  name="date-of-birth" class="form-control" required></p>
+              <br>
+              <label for="nationality" class="form-label"><b>Nationality</b></label>
+              <p><input type="text" id="nationality" placeholder="Nationality..."  name="nationality" class="form-control" required></p>
+              <br>
+              <label  for="state"><b>State of Origin:</b></label>
+                            <select id="state" d required class="form-select" aria-label="Default select example">
+                                <option selected><b>Select State</b></option>
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross River">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Kastina">Kastina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                                <option value="FCT">FCT</option>
+
+                            </select>
+              <br>
+              <label for="status"><b>Marital Status</b></label>
+              <select  class="form-select" name="marital-status" id="status" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Select Status</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+              </select>
             </div>
             <div class="tab">Login Info:
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" required id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-
-              <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-              <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+              <p><input placeholder="E-mail..."  name="email"></p>
+              <p><input placeholder="Phone..."  name="phone"></p>
               <!-- New input for State of Origin -->
-              <p><input placeholder="State of Origin..." oninput="this.className = ''" name="state"></p>
+              <p><input placeholder="State of Origin..."  name="state"></p>
               <!-- New input for Course Option -->
-              <p><input placeholder="Course Option..." oninput="this.className = ''" name="course"></p>
-              <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-              <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+              <p><input placeholder="Course Option..."  name="course"></p>
+              <p><input placeholder="Username..."  name="uname"></p>
+              <p><input placeholder="Password..."  name="pword" type="password"></p>
             </div>
+            <br>
             <div style="overflow:auto;">
               <div style="float:right;">
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -189,96 +178,6 @@ https://templatemo.com/tm-557-grad-school
             </div>
             
           </form>
-            <!-- <form action="connect-database.php" method="GET" id="paymentForm" >
-                <div class="wrapper">
-                    <label for="fname"><b>First Name:</b></label>
-                    <input  type="text" class="form-control" id="fname" name="fname" autocomplete="on" placeholder="Example: John" required aria-required="true">
-                    <br>
-                    <label for="sname"><b>Surname:</b></label>
-                    <input  type="text" class="form-control" id="sname" name="sname" autocomplete="on" placeholder="Example: Doe" required aria-required="true">
-                    <br>
-                    <label for="email-address"><b>Email:</b></label>
-                    <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="login with a valid email" class="form-control" id="email-address" 
-                    autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
-                    <br>
-                    <label for="phone-number"><b>Phone Number:</b></label>
-                   <div class="input-container">
-                    <input type="tel"  class="form-control" name="phone-number" id="phone-number" autocomplete="on" placeholder="Example: 08012345678"
-                    title="Phone Number must be a number" pattern="[0-9]{11}" required>
-                   </div>
-                    <br>
-                    <label  for="state"><b>State of Origin:</b></label>
-                    <select id="state" d required class="form-select" aria-label="Default select example">
-                        <option selected><b>Select State</b></option>
-                        <option value="Abia">Abia</option>
-                        <option value="Adamawa">Adamawa</option>
-                        <option value="Akwa Ibom">Akwa Ibom</option>
-                        <option value="Anambra">Anambra</option>
-                        <option value="Bauchi">Bauchi</option>
-                        <option value="Bayelsa">Bayelsa</option>
-                        <option value="Benue">Benue</option>
-                        <option value="Borno">Borno</option>
-                        <option value="Cross River">Cross River</option>
-                        <option value="Delta">Delta</option>
-                        <option value="Ebonyi">Ebonyi</option>
-                        <option value="Edo">Edo</option>
-                        <option value="Ekiti">Ekiti</option>
-                        <option value="Enugu">Enugu</option>
-                        <option value="Gombe">Gombe</option>
-                        <option value="Imo">Imo</option>
-                        <option value="Jigawa">Jigawa</option>
-                        <option value="Kaduna">Kaduna</option>
-                        <option value="Kano">Kano</option>
-                        <option value="Kastina">Kastina</option>
-                        <option value="Kebbi">Kebbi</option>
-                        <option value="Kogi">Kogi</option>
-                        <option value="Kwara">Kwara</option>
-                        <option value="Lagos">Lagos</option>
-                        <option value="Nasarawa">Nasarawa</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Ogun">Ogun</option>
-                        <option value="Ondo">Ondo</option>
-                        <option value="Osun">Osun</option>
-                        <option value="Oyo">Oyo</option>
-                        <option value="Plateau">Plateau</option>
-                        <option value="Rivers">Rivers</option>
-                        <option value="Sokoto">Sokoto</option>
-                        <option value="Taraba">Taraba</option>
-                        <option value="Yobe">Yobe</option>
-                        <option value="Zamfara">Zamfara</option>
-                        <option value="FCT">FCT</option>
-
-                    </select>
-                      <br>
-                      <label for="amount"><b>Amount</b></label>
-                    <input  type="text" disabled class="form-control" id="amount" name="amount"  value="2000" placeholder="2000 Naira only" aria-required="true">
-                    <br>
-                    <b style="color: #d9534f;"><i>Refusal to pay this amount will warrant your application not being accepted</i></b>
-                    <br><br>
-                    <div class="mb-3">
-                        <label class="form-label" for="address"><b>Address:</b></label>
-                        <textarea class="form-control" id="address"  placeholder="Please enter your Home/Work Address" required></textarea>
-                    </div>
-                    <br>
-                    
-                    <div class="form-check">
-                            <input class="form-check-input"  required type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Accept <a href="#" >Terms and Conditions</a>
-                            </label>
-                            <br>
-                            <br>
-                            
-                          </div>
-                          
-                    <button onclick="payWithPaystack()" type="submit" class="btn btn-success payment" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="fas fa-money-bill-wave"></i> Proceed to Payment
-                    </button>
-                <br>
-                    </div>
-                </div> -->
-            </form>
         </div>
         </div> 
     </div> 
@@ -288,7 +187,7 @@ https://templatemo.com/tm-557-grad-school
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
           <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="#" rel="sponsored" target="_parent">ICON ACADEMY</a></p>
         </div>
       </div>
