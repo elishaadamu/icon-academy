@@ -68,7 +68,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="content-signup">
           <form id="regForm" action="/action_page.php">
             <!-- One "tab" for each step in the form: -->
-            <div class="tab"><h2>Personal Details</h2>
+            <!-- <div class="tab"><h3>Personal Details</h3>
               
               <br>
               <label for="title"><b>Student's title</b></label>
@@ -90,9 +90,6 @@ https://templatemo.com/tm-557-grad-school
               <br>
               <label for="middle-name" class="form-label"><b>Middle Name</b></label>
               <p><input placeholder="Middle name..." id="middle-name"  name="mname" class="form-control" required></p>
-              <br>
-              <label for="other-name" class="form-label"><b>Other Names <span class="badge bg-info">optional</span></b></label>
-              <p><input placeholder="Other name..." id="other-name"  name="oname" class="form-control"></p>
               <br>
               <label for="residential-address" class="form-label"><b>Residential Address</b></label>
               <p><input placeholder="Residential Address..." id="residential-address"  name="residential-address" class="form-control" required></p>
@@ -157,16 +154,84 @@ https://templatemo.com/tm-557-grad-school
                 <option value="Married">Married</option>
                 <option value="Divorced">Divorced</option>
               </select>
-            </div>
-            <div class="tab">Login Info:
-              <p><input placeholder="E-mail..."  name="email"></p>
-              <p><input placeholder="Phone..."  name="phone"></p>
-              <!-- New input for State of Origin -->
-              <p><input placeholder="State of Origin..."  name="state"></p>
-              <!-- New input for Course Option -->
-              <p><input placeholder="Course Option..."  name="course"></p>
-              <p><input placeholder="Username..."  name="uname"></p>
-              <p><input placeholder="Password..."  name="pword" type="password"></p>
+            </div> -->
+            <!-- <div class="tab">
+              <h3>Next of Kin</h3>
+              <label for="kin-number" class="form-label"><b>Name</b></label>
+              <p><input placeholder="Name..." id="kin-number"  class="form-control" name="kin-name" required></p>
+              <br>
+              <label for="kin-relationship"><b>Relationship</b></label>
+              <select  class="form-select" name="kin-relationship" id="kin-relationship" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Select Title</option>
+                <option value="Father">Father</option>
+                <option value="Mother">Mother</option>
+                <option value="Sister">Sister</option>
+                <option value="Brother">Brother</option>
+                <option value="Child">Child</option>
+                <option value="Friend">Friend</option>
+              </select>
+              <br>
+              <label for="kin-residence" class="form-label"><b>Residential Address</b></label>
+              <p><input placeholder="Residential Address..." id="kin-residence"  class="form-control" name="kin-residence" required></p>
+              <br>
+              <label for="kin-number" class="form-label"><b>Phone Number</b></label>
+              <p><input type="tel"  class="form-control" name="kin-number" id="kin-number" autocomplete="on" placeholder="Example: 08012345678"
+                title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
+            
+            <br>
+            <h3>Father's Details</h3>
+              <label for="father-name" class="form-label"><b>Fathers Name</b></label>
+              <p><input placeholder="Name..." id="father-name"  class="form-control" name="father-name" required></p>
+              <br>
+              <label for="residential-address" class="form-label"><b>Residential Address</b></label>
+              <p><input placeholder="Fathers Residential Address..." id="residential-address"  class="form-control" name="residential-address" required></p>
+              <br>
+              <label for="father-occupation" class="form-label"><b>Fathers Occupation</b></label>
+              <p><input placeholder="Father's Occupation..." id="father-occupation"  class="form-control" name="father-occupation" required></p>
+              <br>
+              <label for="father-number" class="form-label"><b>Fathers Phone Number</b></label>
+              <p><input type="tel"  class="form-control" name="father-number" id="father-number" autocomplete="on" placeholder="Example: 08012345678"
+              title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
+              <br>
+              <h3>Mother's Details</h3>
+              <label for="mother-name" class="form-label"><b>Mothers Name</b></label>
+              <p><input placeholder="Mothers Name..." id="mother-name"  class="form-control" name="mother-name" required></p>
+              <br>
+              <label for="father-address" class="form-label"><b>Mothers Address</b></label>
+              <p><input placeholder="Mother Address..." id="father-address"  class="form-control" name="father-address" required></p>
+              <br>
+              <label for="mother-occupation" class="form-label"><b>Occupation</b></label>
+              <p><input placeholder="Mother Residential Address..." id="mother-occupation"  class="form-control" name="mother-occupation" required></p>
+              <br>
+              <label for="mother-number" class="form-label"><b>Phone Number</b></label>
+              <p><input type="tel"  class="form-control" name="mother-number" id="mother-number" autocomplete="on" placeholder="Example: 08012345678"
+                title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
+              <br>
+              <h3>Work History</h3>
+              <label for="place-of-employment" class="form-label"><b>Place of Employment</b></label>
+              <p><input placeholder="Place of Employment..." id="place-of-employment"  class="form-control" name="place-of-employment" required></p>
+              <br>
+              <label for="work-address" class="form-label"><b>Work Address</b></label>
+              <p><input placeholder="Work Address..." id="work-address"  class="form-control" name="work-address" required></p>
+              <br>
+              <label for="office-number" class="form-label"><b>Office Number</b></label>
+              <p><input placeholder="Office Number..." id="office-number"  class="form-control" name="office-number" required></p>
+              <br>
+              <label for="boss-name" class="form-label"><b>Name of Immediate Boss</b></label>
+              <p><input placeholder="Name of Immediate Boss..." id="boss-name"  class="form-control" name="boss-name" required></p>
+              <br>
+              <label for="boss-number" class="form-label"><b>Phone Number of Immediate Boss</b></label>
+              <p><input placeholder="Phone Number of Immediate Boss..." id="boss-number"  class="form-control" name="boss-number" required></p>
+              <br>
+
+            </div> -->
+            <div class="tab">
+              <label for="course"><b>Courses</b></label>
+              <select onchange="myFunction()" class="form-select" name="course" id="course" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Select Course</option>
+                <option id="profession_diploma" value="Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)">Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)</option>
+                <option id="advanced_diploma" value="Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)">Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)</option>
+              </select>
             </div>
             <br>
             <div style="overflow:auto;">
@@ -176,6 +241,7 @@ https://templatemo.com/tm-557-grad-school
               </div>
             </div>
             <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
             </div>
@@ -208,7 +274,18 @@ https://templatemo.com/tm-557-grad-school
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
-    
+    function myFunction(){
+      let profession_diploma = document.getElementById("profession_diploma").value;
+      let advanced_diploma = document.getElementById("advanced_diploma").value;
+
+
+      if(profession_diploma == "Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)"){
+        alert("Hello")
+      }
+     else if(advanced_diploma == "Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)"){
+        alert("Hello Adanved")
+      }
+    }
   </script>
 </body>
 </html>
