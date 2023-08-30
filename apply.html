@@ -9,8 +9,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Grad School HTML5 Template</title>
-    
+    <title>IIPPS Academy- Apply</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -229,9 +231,38 @@ https://templatemo.com/tm-557-grad-school
               <label for="course"><b>Courses</b></label>
               <select onchange="myFunction()" class="form-select" name="course" id="course" id="floatingSelect" aria-label="Floating label select example" required>
                 <option selected>Select Course</option>
-                <option id="profession_diploma" value="Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)">Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)</option>
-                <option id="advanced_diploma" value="Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)">Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)</option>
+                <option id="profession_diploma" value="PD-SMS">Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)</option>
+                <option id="advanced_diploma" value="APD-SMS">Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)</option>
               </select>
+              <div class="container">
+                <br>
+                <h3 class="mt-6">Secondary School Certificate</h3>
+                <div class="row">
+                   
+                
+                
+                    <div class="form-group" class="col-12 col-lg-6">
+                        <label for="certificate">Select Certificate:</label>
+                        <select name="certificate" id="certificate" class="form-control">
+                            <option selected value="ssce">Select Certificate</option>
+                            <option value="neco">NECO</option>
+                            <option value="waec">WAEC</option>
+                            <option value="nabtech">NABTECH</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    
+                    <div id="subjects">
+                        <h4 class="mt-4">Subjects and Grades</h4>
+                        <br>
+                        <p id="subjectCounter">Subjects Added: 0</p>
+                        
+                        <button type="button" class="btn btn-primary" id="addSubject">Add Subject</button>
+                        <br>
+                    </div>
+                </form>
+                </div>
+            </div>
             </div>
             <br>
             <div style="overflow:auto;">
@@ -274,18 +305,6 @@ https://templatemo.com/tm-557-grad-school
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
-    function myFunction(){
-      let profession_diploma = document.getElementById("profession_diploma").value;
-      let advanced_diploma = document.getElementById("advanced_diploma").value;
-
-
-      if(profession_diploma == "Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)"){
-        alert("Hello")
-      }
-     else if(advanced_diploma == "Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)"){
-        alert("Hello Adanved")
-      }
-    }
   </script>
 </body>
 </html>

@@ -1743,3 +1743,15 @@ button:hover {
 .step.finish {
   background-color: #172239;
 }
+.subject {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.subject select {
+    margin-right: 10px; /* Adjust this value as needed */
+}
+.btn-primary{
+    margin-bottom: 10px;
+}

@@ -225,4 +225,91 @@
 		  //... and adds the "active" class on the current step:
 		  x[n].className += " active";
 		}
+		document.addEventListener('DOMContentLoaded', function () {
+			const addSubjectButton = document.getElementById('addSubject');
+			const subjectsContainer = document.getElementById('subjects');
+			const subjectCounter = document.getElementById('subjectCounter');
+		
+			const subjectsList = ["English", "Maths", "Physics", "Geography", "Chemistry", "Further Maths", "Biology"];
+			const gradesList = ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"];
+			const addedSubjects = new Set();
+			let count = 0;
+		
+			addSubjectButton.addEventListener('click', function () {
+				if (addedSubjects.size < subjectsList.length) {
+					const subjectDiv = document.createElement('div');
+					subjectDiv.classList.add('subject');
+		
+					const subjectNameSelect = document.createElement('select');
+					subjectNameSelect.innerHTML = '<option value="" disabled selected>Select Subject</option>';
+					subjectNameSelect.name = 'subject'; // Set the name attribute
+		
+					// Sort subjects in alphabetical order
+					const sortedSubjects = subjectsList.slice().sort();
+					sortedSubjects.forEach(function (subject) {
+						if (!addedSubjects.has(subject)) {
+							const option = document.createElement('option');
+							option.value = subject; // Set value to subject name
+							option.text = subject;
+							subjectNameSelect.appendChild(option);
+						}
+					});
+		
+					const gradeSelect = document.createElement('select');
+					gradeSelect.name = 'grade'; // Set the name attribute
+					gradesList.forEach(function (grade) {
+						const option = document.createElement('option');
+						option.value = grade;
+						option.text = grade;
+						gradeSelect.appendChild(option);
+					});
+		
+					subjectDiv.appendChild(subjectNameSelect);
+					subjectDiv.appendChild(gradeSelect);
+		
+					subjectNameSelect.addEventListener('change', function () {
+						if (addedSubjects.has(subjectNameSelect.value)) {
+							alert('This subject has already been selected.');
+							return;
+						}
+		
+						addedSubjects.add(subjectNameSelect.value);
+						subjectNameSelect.disabled = true;
+		
+						if (addedSubjects.size === subjectsList.length) {
+							addSubjectButton.textContent = 'All Subjects Added';
+							addSubjectButton.disabled = true;
+							alert('All subjects are added.');
+						}
+		
+						count++;
+						subjectCounter.textContent = `Subjects Added: ${count}`;
+		
+						if (count === 9) {
+							Swal.fire({
+								title: 'Maximum Subjects Reached',
+								text: 'You have selected the maximum number of subjects.',
+								icon: 'warning'
+							});
+							addSubjectButton.disabled = true;
+						}
+					});
+		
+					subjectsContainer.appendChild(subjectDiv);
+				}
+			});
+		
+			// Listen for changes in subject selection to update grade selection
+			subjectsContainer.addEventListener('change', function (event) {
+				const subjectSelect = event.target;
+				if (subjectSelect.name === 'subject') {
+					const gradeSelect = subjectSelect.nextElementSibling;
+					const selectedSubject = subjectSelect.value;
+					
+					// Modify the value of the selected grade
+					const selectedGrade = gradeSelect.value;
+					gradeSelect.value = `${selectedSubject} - ${selectedGrade}`;
+				}
+			});
+		});
 		
