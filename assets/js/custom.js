@@ -230,7 +230,12 @@
 			const subjectsContainer = document.getElementById('subjects');
 			const subjectCounter = document.getElementById('subjectCounter');
 		
-			const subjectsList = ["English", "Maths", "Physics", "Geography", "Chemistry", "Further Maths", "Biology"];
+			const subjectsList = ["COMMERCE", "FINANCIAL ACCOUNTING", "CHRISTIAN RELIGIOUS STUDIES", "ECONOMICS", "GEOGRAPHY", "GOVERNMENT", "HISTORY", "ISLAMIC STUDIES",
+			"LITERATURE IN ENGLISH", "CIVIC EDUCATION", "ARABIC", "	ENGLISH LANGUAGE", "FRENCH", "HAUSA", "IGBO", "YORUBA",
+		   "FURTHER MATHEMATICS", "GENERAL MATHEMATICS", "AGRICULTURAL SCIENCE", "BIOLOGY", "CHEMISTRY", "HEALTH EDUCATION/HEALTH SCIENCE",
+		   "PHYSICAL EDUCATION", "PHYSICS", "AUTO MECHANICS", "BUILDING CONSTRUCTION", "METAL WORK", "TECHNICAL DRAWING",
+			"WOODWORK", "BASIC ELECTRICITY", "BASIC ELECTRONICS", "CLOTHING AND TEXTILES", "FOODS AND NUTRITION",
+			 "HOME MANAGEMENT", "MUSIC", "VISUAL ART" ];
 			const gradesList = ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"];
 			const addedSubjects = new Set();
 			let count = 0;
