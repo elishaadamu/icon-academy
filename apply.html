@@ -69,8 +69,15 @@ https://templatemo.com/tm-557-grad-school
 
     
         <div class="content-signup">
-          <form id="regForm" action="/action_page.php">
+          <form id="regForm" action=".php">
             <!-- One "tab" for each step in the form: -->
+            <label for="course"><b><h3>Courses</h3></b></label>
+            <select onchange="myFunction()" class="form-select" name="course" id="course" id="floatingSelect" aria-label="Floating label select example" required>
+              <option selected>Select Course</option>
+              <option id="profession_diploma" value="PD-SMS">Professional Diploma in Security Mgt. and Strategic Operations (PD-SMS)</option>
+              <option id="advanced_diploma" value="APD-SMS">Advanced Professional Diploma in Security Mgt. and Strategic Operations (APD-SMS)</option>
+            </select>
+            <br>
              <div class="tab"><h3>Personal Details</h3>
               
               <br>
@@ -94,6 +101,11 @@ https://templatemo.com/tm-557-grad-school
               <label for="middle-name" class="form-label"><b>Middle Name</b></label>
               <p><input placeholder="Middle name..." id="middle-name"  name="mname" class="form-control" required></p>
               <br>
+              <label for="email-address"><b>Email:</b></label>
+              <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="login with a valid email" class="form-control" id="email-address" 
+              autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
+              <br>
               <label for="residential-address" class="form-label"><b>Residential Address</b></label>
               <p><input placeholder="Residential Address..." id="residential-address"  name="residential-address" class="form-control" required></p>
               <br>
@@ -108,7 +120,7 @@ https://templatemo.com/tm-557-grad-school
               <p><input type="text" id="nationality" placeholder="Nationality..."  name="nationality" class="form-control" required></p>
               <br>
               <label  for="state"><b>State of Origin:</b></label>
-                            <select id="state" d required class="form-select" aria-label="Default select example">
+                            <select id="state" name="state" required class="form-select" aria-label="Default select example">
                                 <option selected><b>Select State</b></option>
                                 <option value="Abia">Abia</option>
                                 <option value="Adamawa">Adamawa</option>
@@ -149,7 +161,48 @@ https://templatemo.com/tm-557-grad-school
                                 <option value="FCT">FCT</option>
 
                             </select>
+             </div>
+             <div class="tab">
+              <label for="status"><b>Marital Status</b></label>
+              <select name="status"  class="form-select" name="marital-status" id="status" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Select Status</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+              </select>
+              <h3>Declaration</h3>
+              <p>I declare that</p>
+              <ol>
+                <li>The information stated above is, to the best of my knowledge and belief, accurate in every details</li>
+                <li>If I am admitted, I shall obey the rules and regulations of the school.</li>
+                <li>I have never been expelled from any institution of learning for misdemeanour</li>
+
+              </ol>
+              <label for="student-signature" class="form-label"><b>Signature</b></label>
+              <p><input type="text" id="student-signature" placeholder="Your signature is your full name"  name="student-signature" class="form-control" required></p>
               <br>
+              <label for="signature-date" class="form-label"><b>Date of Birth</b></label>
+              <p><input type="signature-date" id="date-of-birth" placeholder="Date of Signature..."  name="signature-date" class="form-control" required></p>
+              <br>
+              <label for="amount"><b>Application Fee</b></label>
+              <input  type="text" disabled class="form-control" id="amount" name="amount"  value="13000" placeholder="13000 Naira only" aria-required="true">
+              <br>
+              <div class="form-check">
+                
+                <input class="form-check-input"  required type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Accept <a href="#" >Terms and Conditions</a>
+                </label>
+                <br>
+                <br>
+                
+              </div>
+              
+              <button onclick="payWithPaystack()" type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="fas fa-money-bill-wave"></i> Proceed to Payment
+              </button>
+             </div>                
+              <!-- <br>
               <label for="status"><b>Marital Status</b></label>
               <select  class="form-select" name="marital-status" id="status" id="floatingSelect" aria-label="Floating label select example" required>
                 <option selected>Select Status</option>
@@ -255,7 +308,7 @@ https://templatemo.com/tm-557-grad-school
                     
                     <div id="subjects">
                         <h4 class="mt-4">Subjects and Grades</h4>
-                        <br>
+                        
                         <p id="subjectCounter">Subjects Added: 0</p>
                         
                         <button type="button" class="btn btn-primary" id="addSubject">Add Subject</button>
@@ -264,7 +317,7 @@ https://templatemo.com/tm-557-grad-school
                 </form>
                 </div>
             </div>
-            </div>
+            </div>-->
             <br>
             <div style="overflow:auto;">
               <div style="float:right;">
@@ -275,7 +328,7 @@ https://templatemo.com/tm-557-grad-school
             <div style="text-align:center;margin-top:40px;">
               <span class="step"></span>
               <span class="step"></span>
-              <span class="step"></span>
+              
             </div>
             
           </form>

@@ -1,129 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Grades Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <style>
-     .subject {
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+label, select, button {
+    display: block;
     margin-bottom: 10px;
+}
+
+#subjectsContainer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.subject-row {
     display: flex;
     align-items: center;
-}
-
-.subject select {
-    margin-right: 10px; /* Adjust this value as needed */
-}
-.btn-primary{
     margin-bottom: 10px;
 }
+
+.subject-row select, .subject-row input {
+    margin-right: 10px;
+}
+
     </style>
-    <div class="container">
-        <h1 class="mt-6">Secondary School Certificate</h1>
-        <div class="row">
-           
-        
-        <form id="certificateForm" action="c.php" method="post">
-            <div class="form-group" class="col-12 col-lg-6">
-                <label for="certificate">Select Certificate:</label>
-                <select id="certificate" class="form-control">
-                    <option value="ssce">NECO</option>
-                    <option value="waec">WAEC</option>
-                    <!-- Add more options as needed -->
-                </select>
-            </div>
-            
-            <div id="subjects">
-                <h2 class="mt-4">Subjects and Grades</h2>
-                <br>
-                <p id="subjectCounter">Subjects Added: 0</p>
-                
-                <button type="button" class="btn btn-primary" id="addSubject">Add Subject</button>
-                <br>
-            </div>
-            
-            <button type="submit" class="btn btn-success mt-3">Submit</button>
-        </form>
+    <h1>Subject Grades Form</h1>
+    <form id="gradeForm" action="c.php" method="post">
+        <label for="certificate">Select Certificate:</label>
+        <select id="certificate" name="certificate">
+            <option value="ssce">SSCE</option>
+            <option value="waec">WAEC</option>
+            <!-- Add more options as needed -->
+        </select>
+        <div id="subjectsContainer">
+            <!-- Subjects and grades will be dynamically added here -->
         </div>
-    </div>
-</body>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const addSubjectButton = document.getElementById('addSubject');
-    const subjectsContainer = document.getElementById('subjects');
-    const subjectCounter = document.getElementById('subjectCounter');
+        <button type="button" id="addSubject">Add Subject</button>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const addSubjectButton = document.getElementById("addSubject");
+    const subjectsContainer = document.getElementById("subjectsContainer");
 
-    const subjectsList = ["English", "Maths", "Physics", "Geography", "Chemistry", "Further Maths", "Biology"];
-    const gradesList = ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"];
-    const addedSubjects = new Set();
-    let count = 0;
+    addSubjectButton.addEventListener("click", function () {
+        const subjectRow = document.createElement("div");
+        subjectRow.classList.add("subject-row");
 
-    addSubjectButton.addEventListener('click', function () {
-        if (addedSubjects.size < subjectsList.length) {
-            const subjectDiv = document.createElement('div');
-            subjectDiv.classList.add('subject');
+        const subjectInput = document.createElement("input");
+        subjectInput.type = "text";
+        subjectInput.placeholder = "Subject";
+        subjectRow.appendChild(subjectInput);
 
-            const subjectNameSelect = document.createElement('select');
-            subjectNameSelect.innerHTML = '<option value="" disabled selected>Select Subject</option>';
+        const gradeInput = document.createElement("input");
+        gradeInput.type = "text";
+        gradeInput.placeholder = "Grade";
+        subjectRow.appendChild(gradeInput);
 
-            // Sort subjects in alphabetical order
-            const sortedSubjects = subjectsList.slice().sort();
-            sortedSubjects.forEach(function (subject) {
-                if (!addedSubjects.has(subject)) {
-                    const option = document.createElement('option');
-                    option.value = subject;
-                    option.text = subject;
-                    subjectNameSelect.appendChild(option);
-                }
-            });
+        subjectsContainer.appendChild(subjectRow);
+    });
 
-            const gradeSelect = document.createElement('select');
-            gradesList.forEach(function (grade) {
-                const option = document.createElement('option');
-                option.value = grade;
-                option.text = grade;
-                gradeSelect.appendChild(option);
-            });
+    const gradeForm = document.getElementById("gradeForm");
+    gradeForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            subjectDiv.appendChild(subjectNameSelect);
-            subjectDiv.appendChild(gradeSelect);
+        // You can collect and process the form data here
+        const certificate = document.getElementById("certificate").value;
 
-            subjectNameSelect.addEventListener('change', function () {
-                if (addedSubjects.has(subjectNameSelect.value)) {
-                    alert('This subject has already been selected.');
-                    return;
-                }
+        const subjects = [];
+        const subjectRows = document.querySelectorAll(".subject-row");
+        subjectRows.forEach(row => {
+            const subject = row.querySelector("input[type='text'][placeholder='Subject']").value;
+            const grade = row.querySelector("input[type='text'][placeholder='Grade']").value;
+            subjects.push({ subject, grade });
+        });
 
-                addedSubjects.add(subjectNameSelect.value);
-                subjectNameSelect.disabled = true;
+        // Now you can do something with the collected data, like sending it to a server
+        console.log("Certificate:", certificate);
+        console.log("Subjects:", subjects);
 
-                if (addedSubjects.size === subjectsList.length) {
-                    addSubjectButton.textContent = 'All Subjects Added';
-                    addSubjectButton.disabled = true;
-                    alert('All subjects are added.');
-                }
-
-                count++;
-                subjectCounter.textContent = `Subjects Added: ${count}`;
-
-                if (count === 9) {
-                    Swal.fire({
-                        title: 'Maximum Subjects Reached',
-                        text: 'You have selected the maximum number of subjects.',
-                        icon: 'warning'
-                    });
-                    addSubjectButton.disabled = true;
-                }
-            });
-
-            subjectsContainer.appendChild(subjectDiv);
-        }
+        // Reset the form if needed
+        gradeForm.reset();
     });
 });
 
-
-</script>
+    </script>
+</body>
 </html>
-
