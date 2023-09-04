@@ -1595,13 +1595,13 @@ footer p a:hover {
 @media screen and (max-width: 950px) {
   .content-main{
     box-shadow: 0px 0px 0px rgb(255, 255, 255);
-    width: 460px !important;
+    width: 400px !important;
     height: 100% !important;
     border-radius: 10px;
     border-left: 1px solid rgb(103, 186, 241);
     border-top: 1px solid rgb(103, 186, 241);
     margin-top: 70px !important;
-    margin-left:0px !important;
+    margin-left:-43px !important;
     margin-right: -20px;
     margin-bottom: 10px !important;
   }
@@ -1614,6 +1614,9 @@ footer p a:hover {
   justify-content: space-between;
   align-items: flex-start;
   
+}
+#formPay{
+  margin-left:  0px !important;
 }
 }
   
@@ -1754,4 +1757,7 @@ button:hover {
 }
 .btn-primary{
     margin-bottom: 10px;
+}
+#formPay{
+  margin-left:  10px !important;
 }
