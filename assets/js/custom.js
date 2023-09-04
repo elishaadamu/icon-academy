@@ -341,8 +341,8 @@
 		}
 		const paymentForm = document.getElementById('paymentForm');
 paymentForm.addEventListener("submit", payWithPaystack, false);
-function payWithPaystack(e) {
-  e.preventDefault();
+function payWithPaystack() {
+
   let title = document.getElementById("title").value;
   let fname = document.getElementById("first-name").value;
   let surname = document.getElementById("surname").value;
