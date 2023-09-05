@@ -2,7 +2,7 @@
 include 'config.php';
 
  
-header("Location: downloadfile.html", true, 301);  
+ 
 
 
 $title = mysqli_real_escape_string($conn, $_GET['title']);
@@ -22,8 +22,10 @@ $dateofsignature = mysqli_real_escape_string($conn, $_GET['dateofsignature']);
 $amount = "13000";
 
 mysqli_query($conn, "INSERT INTO student_registration(title, firstname, surname, middlename, status,  email, residence, phonenumber, 
-dateofbirth, nationality, state, course, studentsignature, dateofsignature, amount)
+dateofbirth, nationality, state, course, studentsignature, signaturedate, amount)
  VALUES ('".$title."', '".$fname."', '".$surname."', '".$mname."', '".$status."', '".$email."', '".$residence."', '".$phonenumber."', '".$dateofbirth."', '".$nationality."', '".$stateoforigin."', '".$course."', '".$studentsignature."', '".$dateofsignature."', '".$amount."')");
 
-mysqli_close($conn)
+mysqli_close($conn);
+
+header("Location: downloadfile.php", true, 301); 
 ?>
