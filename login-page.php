@@ -88,6 +88,7 @@ https://templatemo.com/tm-557-grad-school
           </ul>
         </li> -->
         <li><a href="application.html" class="external">Payment</a></li>
+        <li><a href="login-page.php" class="external">Login</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="contact.html" class="external">Contact</a></li>
       </ul>

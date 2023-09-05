@@ -57,6 +57,7 @@ https://templatemo.com/tm-557-grad-school
           </ul>
         </li> -->
         <li><a href="application.html" class="external">Payment</a></li>
+        <li><a href="login-page.php" class="external">Login</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="contact.html" class="external">Contact</a></li>
       </ul>
@@ -72,7 +73,7 @@ https://templatemo.com/tm-557-grad-school
             <h5>Welcome <b><?php echo $firstname." ".$surname;  ?></b> </h5>
             <br>
             <div class="col-12 col-6" id="reg-number">
-                  <h6 class="alert alert-success">Your Registration number is: <b>IIPPSA/01/00<?php echo $_SESSION["id"];   ?></b></h6>
+                  <h6 class="alert alert-success">Your Registration number is: <b>IIPPSA/01/23/00<?php echo $_SESSION["id"];   ?></b></h6>
                 </div>
                 <br>
             <h3 class="instruction">Set of instructions</h3>
