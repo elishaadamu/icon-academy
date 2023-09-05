@@ -1,29 +1,29 @@
 <?php
 include 'config.php';
-$course = mysqli_real_escape_string($conn, $_GET['course']);
+
+ 
+header("Location: downloadfile.html", true, 301);  
+
+
 $title = mysqli_real_escape_string($conn, $_GET['title']);
 $fname = mysqli_real_escape_string($conn, $_GET['fname']);
 $surname = mysqli_real_escape_string($conn, $_GET['sname']);
 $mname = mysqli_real_escape_string($conn, $_GET['mname']);
+$status = mysqli_real_escape_string($conn, $_GET['status']);
 $email = mysqli_real_escape_string($conn, $_GET['email']);
-$residence = mysqli_real_escape_string($conn, $_GET['residential-address']);
+$residence = mysqli_real_escape_string($conn, $_GET['residentialaddress']);
 $phonenumber = mysqli_real_escape_string($conn, $_GET['phonenumber']);
 $dateofbirth = mysqli_real_escape_string($conn, $_GET['dateofbirth']);
 $nationality = mysqli_real_escape_string($conn, $_GET['nationality']);
 $stateoforigin = mysqli_real_escape_string($conn, $_GET['state']);
-$maritalstatus = mysqli_real_escape_string($conn, $_GET['status']);
+$course = mysqli_real_escape_string($conn, $_GET['course']);
 $studentsignature = mysqli_real_escape_string($conn, $_GET['studentsignature']);
-$signaturedate = mysqli_real_escape_string($conn, $_GET['signaturedate']);
-$amount = mysqli_real_escape_string($conn, $_GET['amount']);
-$reference = mysqli_real_escape_string($conn, $_GET['sent_to_database']);
+$dateofsignature = mysqli_real_escape_string($conn, $_GET['dateofsignature']);
+$amount = "13000";
 
-$_SESSION["fname"] = $fname;
-
-mysqli_query($conn, "INSERT INTO student_registration(course, title, firstname, surname, middlename, email, residence, phonenumber, 
-dateofbirth, nationality, state, maritalstatus, studentsignature, signaturedate, amount, reference)
- VALUES ('".$course."', '".$title."', '".$fname."', '".$surname."', '".$mname."', '".$email."', 
- '".$residence."', '".$phonenumber."', '".$dateofbirth."', '".$nationality."', '".$stateoforigin."',
- '".$maritalstatus."', '".$studentsignature."', '".$signaturedate."','".$amount."', '".$reference."' )");
+mysqli_query($conn, "INSERT INTO student_registration(title, firstname, surname, middlename, status,  email, residence, phonenumber, 
+dateofbirth, nationality, state, course, studentsignature, dateofsignature, amount)
+ VALUES ('".$title."', '".$fname."', '".$surname."', '".$mname."', '".$status."', '".$email."', '".$residence."', '".$phonenumber."', '".$dateofbirth."', '".$nationality."', '".$stateoforigin."', '".$course."', '".$studentsignature."', '".$dateofsignature."', '".$amount."')");
 
 mysqli_close($conn)
 ?>

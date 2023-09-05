@@ -339,34 +339,22 @@
 		
 			  })
 		}
+		
 		const paymentForm = document.getElementById('paymentForm');
 paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack() {
 
-  let title = document.getElementById("title").value;
-  let fname = document.getElementById("first-name").value;
-  let surname = document.getElementById("surname").value;
-  let middlename = document.getElementById("middle-name").value;
-  let status = document.getElementById("status").value;
-  let email = document.getElementById("email-address").value;
-  let residence = document.getElementById("address").value;
-  let phonenumber = document.getElementById("phone-number").value;
-  let date_of_birth = document.getElementById("date-of-birth").value;
-  let nationality = document.getElementById("nationality").value;
-  let address = document.getElementById("state").value;
-  let course = document.getElementById("course").value;
-  let student_signature = document.getElementById("student-signature").value;
-  let date_of_signature = document.getElementById("date-of-signature").value;
-  let amount =  document.getElementById("amount").value;
 
+	let fname = document.getElementById("firstname").value;
+	let surname = document.getElementById("surname").value;
+	
   let fullname = fname + surname;
   let handler = PaystackPop.setup({
     key: 'pk_test_1db996ca9c92eb22d291b838b1646fb9171d806a', // Replace with your public key
     first_name: fullname,
-    last_name: document.getElementById("state").value,
-    email: document.getElementById("email-address").value,
+    email: document.getElementById("emailaddress").value,
     amount: document.getElementById("amount").value * 100,
-    phone: document.getElementById("phone-number").value,
+    phone: document.getElementById("phonenumber").value,
     ref: 'IIPPSA'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
     onClose: function(){
@@ -394,7 +382,7 @@ function payWithPaystack() {
       })
     },
     callback: function(response){
-      window.location = "connect-database.php?reference=" + response.reference;
+      window.location = "apply.html?reference=" + response.reference;
       let message = 'Reference: '+ "  "+ response.reference;
       let sent_to_database = response.reference;
       const Toast = Swal.mixin({
@@ -414,32 +402,16 @@ function payWithPaystack() {
         title: 'Payment successful' + "<br>" +  message 
         
       })
-	  var formData = {
-		title: title,
-		fname:fname,
-		surname:surname,
-		mname: middlename,
-		status: status,
-		email: email,
-		residentialaddress: residence,
-		phonenumber: phonenumber,
-		dateofbirth: date_of_birth,
-		nationality: nationality,
-		state: address,
-		course: course,
-		studentsignature: student_signature,
-		signaturedate: date_of_signature,
-		amount: amount,
-		sent_to_database:sent_to_database
-		 }; $.ajax({
-		   url:"localhost/icon-academy-1/connect-database.php",
-		   type: "GET",
-		   data: formData,
-		   success: function (response)
-		   {
+	//   var formData = {title: title, fname:fname, surname:surname, mname: mname, status: status, email: email, residentialaddress: residentialaddress, phonenumber: phonenumber, dateofbirth: dateofbirth, nationality: nationality, state: state, course: course, studentsignature: studentsignature, dateofsignature: dateofsignature, amount: amount, sent_to_database:sent_to_database }; 
+	//   $.ajax({
+	// 	   url:"localhost/icon-academy-1/connect-database.php",
+	// 	   type: "GET",
+	// 	   data: formData,
+	// 	   success: function (response)
+	// 	   {
    
-		   }
-		 })
+	// 	   }
+	// 	 })
     }
   });
   

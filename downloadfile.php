@@ -9,9 +9,12 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/images/Screenshot-2023-08-29-125908.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <title>IIPPS Academy- Contact Us</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>IIPPS Academy- Apply</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -52,57 +55,32 @@ https://templatemo.com/tm-557-grad-school
       </ul>
     </nav>
   </header>
-  <section class="section contact" data-section="section6">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Let’s Keep In Touch</h2>
-          </div>
-        </div>
-        <div class="col-md-6">
         
-        <!-- Do you need a working HTML contact-form script?
-                	
-                    Please visit https://templatemo.com/contact page -->
-                    
-          <form id="contact" action="https://formspree.io/f/mdovzakp" method="post">
-            <div class="row">
-              <div class="col-md-6">
-                  <fieldset>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
-                  </fieldset>
-                </div>
-                <div class="col-md-6">
-                  <fieldset>
-                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
-                  </fieldset>
-                </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="button">Send Message Now</button>
-                </fieldset>
-              </div>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-12" id="formPay">
+            <center>
+                <h2 class='header'>Download Form </h2>
+            </center>
+            
+            <h3 class="instruction">Set of instructions</h3>
+                <ol>
+                    <li>Please click on button to download file.</li>
+                    <li>Fill the form manually and send to this email: <b><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a> or contact: <a href="tel:07062094716">07062094716</a></b></li>    
+                </ol>
+                <a class="form" href="./assets/images/ICONINTERNATIONAL.pdf" download=""><button class="btn btn-success">Download File <i class="fas fa-download"></i></button></a>    
             </div>
-          </form>
         </div>
-        <div class="col-md-6">
-          <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1005709.5150799523!2d8.07391028848488!3d10.053712486622775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1053725921ad7509%3A0xd1d605a1107dca9!2sFirst%20Bank%20-%20Bassa%20Branch!5e0!3m2!1sen!2sng!4v1693301235966!5m2!1sen!2sng" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </div>            
+           
+
+    
+     
+
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
           <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="#" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
         </div>
       </div>
@@ -110,7 +88,7 @@ https://templatemo.com/tm-557-grad-school
   </footer>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://js.paystack.co/v1/inline.js"></script> 
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/lightbox.js"></script>
@@ -118,7 +96,8 @@ https://templatemo.com/tm-557-grad-school
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
-
-
+  <script>
+   
+  </script>
 </body>
 </html>

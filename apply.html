@@ -49,7 +49,7 @@ https://templatemo.com/tm-557-grad-school
             <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
           </ul>
         </li> -->
-        <li><a href="apply.html" class="external">Apply</a></li>
+        <li><a href="application.html" class="external">Application</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="contact.html" class="external">Contact</a></li>
       </ul>
@@ -58,7 +58,7 @@ https://templatemo.com/tm-557-grad-school
   
   <div class="content-main">
 
-      <h1 class="header">Signup as a Student</h1>
+      <h1 class="header">Fill form</h1>
     <div class="line">
     </div>
   
@@ -72,7 +72,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="content-signup">
           
             <!-- One "tab" for each step in the form: -->
-            <form id="paymentForm" method="GET" action="connect-database.php"></form>
+            <form method="GET" action="connect-database.php">
            
     
               <div class="container">
@@ -92,13 +92,13 @@ https://templatemo.com/tm-557-grad-school
               </select>
               <br>
               <label for="first-name" class="form-label"><b>First Name</b></label>
-              <p><input placeholder="First name..." id="first-name"  class="form-control" name="fname" required></p>
+              <p><input placeholder="First name..." id="firstname"  class="form-control" name="fname" required></p>
               <br>
               <label for="surname" class="form-label"><b>Surname</b></label>
               <p><input placeholder="Surname..." id="surname"  class="form-control" name="sname" required></p>
               <br>
               <label for="middle-name" class="form-label"><b>Middle Name</b></label>
-              <p><input placeholder="Middle name..." id="middle-name"  name="mname" class="form-control" required></p>
+              <p><input placeholder="Middle name..." id="middlename"  name="mname" class="form-control" required></p>
               <br>
               <label for="status"><b>Marital Status</b></label>
               <select name="status"  class="form-select"  id="status" id="floatingSelect" aria-label="Floating label select example" required>
@@ -109,18 +109,18 @@ https://templatemo.com/tm-557-grad-school
               <br>
               <label for="email-address"><b>Email:</b></label>
               <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="login with a valid email" class="form-control" id="email-address" 
+              title="login with a valid email" class="form-control" id="emailaddress" 
               autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
               <br>
               <label for="residential-address" class="form-label"><b>Residential Address</b></label>
               <p><input placeholder="Residential Address..." id="address"  name="residentialaddress" class="form-control" required></p>
               <br>
               <label for="phone-number" class="form-label"><b>Phone Number</b></label>
-              <p><input type="tel"  class="form-control" name="phonenumber" id="phone-number" autocomplete="on" placeholder="Example: 08012345678"
+              <p><input type="tel"  class="form-control" name="phonenumber" id="phonenumber" autocomplete="on" placeholder="Example: 08012345678"
                 title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
               <br>
               <label for="date-of-birth" class="form-label"><b>Date of Birth</b></label>
-              <p><input type="date" id="date-of-birth" placeholder="Date of Birth..."  name="dateofbirth" class="form-control" required></p>
+              <p><input type="date" id="dateofbirth" placeholder="Date of Birth..."  name="dateofbirth" class="form-control" required></p>
               <br>
               <label for="nationality" class="form-label"><b>Nationality</b></label>
               <p><input type="text" id="nationality" placeholder="Nationality..."  name="nationality" class="form-control" required></p>
@@ -186,27 +186,14 @@ https://templatemo.com/tm-557-grad-school
 
               </ol>
               <label for="student-signature" class="form-label"><b>Signature</b></label>
-              <p><input type="text" id="student-signature" placeholder="Your signature is your full name"  name="studentsignature" class="form-control" required></p>
+              <p><input type="text" id="studentsignature" placeholder="Your signature is your full name"  name="studentsignature" class="form-control" required></p>
               <br>
               <label for="signature-date" class="form-label"><b>Date of Signature</b></label>
-              <p><input type="date" id="date-of-signature" placeholder="Date of Signature..."  name="signaturedate" class="form-control" required></p>
+              <p><input type="date" id="dateofsignature" placeholder="Date of Signature..."  name="dateofsignature" class="form-control" required></p>
               <br>
-              <label for="amount"><b>Application Fee</b></label>
-              <input  type="text" disabled class="form-control" id="amount" name="amount"  value="13000" placeholder="13000 Naira only" aria-required="true">
-              <br>
-              <div class="form-check">
-                
-                <input class="form-check-input"  required type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Accept <a href="#" >Terms and Conditions</a>
-                </label>
-                <br>
-                <br>
-                
-              </div>
               
-              <button onclick="payWithPaystack()" type="submit" class="btn btn-success" style="background-color: #172239; border-radius: 0px; border-color: #172239;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <i class="fas fa-money-bill-wave"></i> Proceed to Payment
+              <button  type="submit" class="btn btn-success" style="background-color: #172239; border-radius: 0px; border-color: #172239;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fas fa-paperclip"></i> Submit form
               </button>
               <br>
               <br>
