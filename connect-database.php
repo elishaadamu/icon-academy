@@ -27,5 +27,5 @@ dateofbirth, nationality, state, course, studentsignature, signaturedate, amount
 
 mysqli_close($conn);
 
-header("Location: downloadfile.php", true, 301); 
+header("Location: login-page.php", true, 301); 
 ?>

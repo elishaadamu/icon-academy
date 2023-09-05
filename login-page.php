@@ -1,10 +1,41 @@
 <?php
+  if(isset($_POST["submit"])){
+   
   session_start();
-  $firstname = $_SESSION["firstname"];
-  $surname = $_SESSION["surname"];
+  // declaring the session mechanism
+  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+      header("Location:login-page.php");
+  }
+  include 'config.php';
 
-  
+$email = $_POST["email"];
+$phonenumber = $_POST["phonenumber"];
+
+    $sql = "SELECT * FROM student_registration WHERE email = '$email' AND phonenumber = '$phonenumber' limit 1 ";
+    
+    $result = mysqli_query($conn, $sql);
+
+    if(mysqli_num_rows($result) > 0){
+        session_start();
+            $_SESSION["loggedin"] = true;
+            $_SESSION["email"] = $email; 
+            $_SESSION["start"] = time();
+            $_SESSION["expire"] =  $_SESSION['start'] + (3000000);
+            header("Location:downloadfile.php");
+            while($row = mysqli_fetch_assoc($result)){
+             $_SESSION["firstname"] = $row["firstname"];
+              $_SESSION["surname"] = $row["surname"];
+              $_SESSION["id"] = $row["id"];
+           }
+  }
+
+  $conn->close();
+
+  }
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +48,7 @@
     <link rel="shortcut icon" href="assets/images/Screenshot-2023-08-29-125908.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>IIPPS Academy - Download form</title>
+    <title>IIPPS Academy - Login - page</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -66,24 +97,23 @@ https://templatemo.com/tm-557-grad-school
     <div class="container" id="container">
         <div class="row">
             <div class="col-12" id="formPay">
-            <center>
-                <h2 class='header'>Download Form </h2>
-            </center>
-            <h5>Welcome <b><?php echo $firstname." ".$surname;  ?></b> </h5>
-            <br>
-            <div class="col-12 col-6" id="reg-number">
-                  <h6 class="alert alert-success">Your Registration number is: <b>IIPPSA/01/00<?php echo $_SESSION["id"];   ?></b></h6>
-                </div>
-                <br>
-            <h3 class="instruction">Set of instructions</h3>
-                <ol>
-                    <li>Please click on button to download file.</li>
-                    <li>Fill the form manually and send to this email: <b><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a> or contact: <a href="tel:07062094716">07062094716</a></b></li>    
-                </ol>
-                <br>
-                <a class="form" href="./assets/images/ICONINTERNATIONAL.pdf" download=""><button class="btn btn-success">Download File <i class="fas fa-download"></i></button></a>    
-              <br> 
-              <br>
+                <center>
+                    <form action="login-page.php" method="POST">
+                    <h2 class='header'>Login Page </h2>
+                    <label for="email-address"><b>Email:</b></label>
+                    <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="login with a valid email" class="form-control" id="emailaddress" 
+                    autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
+                    <br>
+                    <label for="phone-number" class="form-label"><b>Phone Number</b></label>
+                    <p><input type="tel"  class="form-control" name="phonenumber" id="phonenumber" autocomplete="on" placeholder="Example: 08012345678"
+                        title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
+                    <br>
+                    <button  type="submit" name="submit" class="btn btn-success" style="background-color: #172239; border-radius: 0px; border-color: #172239;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-paperclip"></i> Login
+                    </button>
+                    </form>
+                </center>
                 
             </div>
         </div>
