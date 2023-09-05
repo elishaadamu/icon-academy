@@ -355,7 +355,7 @@ function payWithPaystack() {
     email: document.getElementById("emailaddress").value,
     amount: document.getElementById("amount").value * 100,
     phone: document.getElementById("phonenumber").value,
-    ref: 'IIPPSA'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    ref: 'IIPPSA/01/'+Math.floor((Math.random() * 1000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
     onClose: function(){
       let timerInterval
