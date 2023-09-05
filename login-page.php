@@ -96,8 +96,8 @@ https://templatemo.com/tm-557-grad-school
         
     <div class="container" id="container">
         <div class="row">
-            <div class="col-12" id="formPay">
-                <center>
+            <div class="col-12 col-lg-7" id="formlogin">
+                
                     <form action="login-page.php" method="POST">
                     <h2 class='header'>Login Page </h2>
                     <label for="email-address"><b>Email:</b></label>
@@ -113,7 +113,7 @@ https://templatemo.com/tm-557-grad-school
                     <i class="fas fa-paperclip"></i> Login
                     </button>
                     </form>
-                </center>
+                
                 
             </div>
         </div>
