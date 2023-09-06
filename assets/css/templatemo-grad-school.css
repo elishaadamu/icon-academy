@@ -1622,6 +1622,9 @@ footer p a:hover {
   margin-left: -20px;
   margin-top: 20px;
 }
+#formlogin{
+  margin-left: 0px;
+}
 }
   
 .header{
@@ -1764,7 +1767,7 @@ button:hover {
 }
 #formlogin{
   margin-left:  10px !important;
-  margin-left: 300px !important;
+  margin-left: 300px;
 }
 #container{
   margin: 80px 0px 200px 0px;
