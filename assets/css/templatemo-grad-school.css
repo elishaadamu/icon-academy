@@ -1625,6 +1625,15 @@ footer p a:hover {
 #formlogin{
   margin-left: 0px;
 }
+.abbrevate{
+  margin-left: -20px;
+}
+.full-name{
+  margin-top: -30px;
+  margin-left: -20px;
+  color: white;
+  font-size: 8.5px;
+}
 }
   
 .header{

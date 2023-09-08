@@ -44,7 +44,8 @@ https://templatemo.com/tm-557-grad-school
     <div class="logo">
       <a href="index.html"><em>IIPPS</em> Academy</a>
     </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="abbrevate"><em>IIPPS</em> Academy</a>
+    <p class="full-name">Icon International Policy and Professional Security Academy</p>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="index.html" class="external">Home</a></li>
