@@ -68,7 +68,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="row">
             <div class="col-12" id="formPay">
             <center>
-                <h2 class='header'>Download Form </h2>
+                <h2 class='header'>Student Dashboard </h2>
             </center>
             <h5>Welcome <b><?php echo $firstname." ".$surname;  ?></b> </h5>
             <br>
@@ -76,7 +76,7 @@ https://templatemo.com/tm-557-grad-school
                   <h6 class="alert alert-success">Your Registration number is: <b>IIPPSA/01/23/00<?php echo $_SESSION["id"];   ?></b></h6>
                 </div>
                 <br>
-            <h3 class="instruction">Set of instructions</h3>
+                <h3 class="instruction">Set of instructions</h3>
                 <ol>
                     <li>Please click on button to download file.</li>
                     <li>Fill the form manually and send to this email: <b><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a> or contact: <a href="tel:07062094716">07062094716</a></b></li>    

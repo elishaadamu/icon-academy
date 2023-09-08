@@ -21,7 +21,7 @@ $phonenumber = $_POST["phonenumber"];
             $_SESSION["email"] = $email; 
             $_SESSION["start"] = time();
             $_SESSION["expire"] =  $_SESSION['start'] + (3000000);
-            header("Location: downloadfile.php");
+            header("Location: dashboard.php");
             while($row = mysqli_fetch_assoc($result)){
              $_SESSION["firstname"] = $row["firstname"];
               $_SESSION["surname"] = $row["surname"];
