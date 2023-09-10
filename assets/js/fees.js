@@ -382,7 +382,7 @@ function payWithPaystack(e) {
       })
     },
     callback: function(response){
-      window.location = "localhost/icon-academy-1/dashboard.php" + response.reference;
+      window.location = "localhost/icon-academy-1/dashboard.php?reference" + response.reference;
       let message = 'Reference: '+ "  "+ response.reference;
       let reference = response.reference;
       const Toast = Swal.mixin({
