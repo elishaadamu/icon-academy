@@ -1,9 +1,26 @@
 <?php
+
+include 'config.php';
   session_start();
   $firstname = $_SESSION["firstname"];
   $surname = $_SESSION["surname"];
+  $phonenumber = $_SESSION["phonenumber"];
+  $middlename = $_SESSION["middlename"];
 
+  $sql = "SELECT * FROM tuition_table WHERE phonenumber = '$phonenumber' limit 1";
+  $result = mysqli_query($conn, $sql);
   
+  if(mysqli_num_rows($result) > 0){
+
+        $_SESSION["loggedin"] = true;
+        $_SESSION["start"] = time();
+        $_SESSION["expire"] =  $_SESSION['start'] + (3000000);
+        while($row = mysqli_fetch_assoc($result)){
+          $_SESSION["pnumber"] = $row["phonenumber"];
+          $_SESSION["regnumber"] = $row["id"];     
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,20 +78,29 @@
       </ul>
     </nav>
   </header>
-        
+
     <div class="container" id="container">
         <div class="row">
             <div class="col-12" id="formPay">
               <center>
                   <h2 class='header'>Student Dashboard </h2>
               </center>
-              <h5>Welcome <b><?php echo $firstname." ".$surname;  ?></b> </h5>
+              <h5>Welcome!!! <b><?php echo $firstname.' '.$surname. ' '. $middlename;?></b> </h5>
               <br>
             </div>
+            
             <div class="col-12 col-lg-6" id="reg-number">
-                  <h6 class="alert alert-success">Your Registration number is: <b>IIPPSA/01/23/00<?php echo $_SESSION["id"];   ?></b></h6>
-                
+                    <?php if( $_SESSION["pnumber"] == $phonenumber){ 
+                    echo '<h6 class="alert alert-info">  Your Registration number is: <b>IIPPSA/01/23/00' . $_SESSION["regnumber"] .  '</b></h6>';
+                    } 
+                    else{
+                      echo  '<h6 class="alert alert-danger">You have not paid tuition fee yet, proceed to payment now.</b></h6>'
+                      ;
+                    }  ?>
+              
+              
                 <br>
+           
                 <h3 class="instruction">Set of instructions</h3>
                 <ol>
                     <li>Please click on button to download file.</li>
@@ -86,9 +112,20 @@
               <br>
                 
             </div>
-            <div class="col-12 col-lg-6" id="reg-number">
+            <?php  if( $_SESSION["pnumber"] == $phonenumber){
+              echo '
+              <div class="col-12 col-lg-6" id="reg-number">
+              <h4>Congratulations, your are now an official student of the academy.</h4>
+              <h5 class="alert alert-success"> Your Registration number is IIPPSA/01/23/00' . $_SESSION["regnumber"]. 
+              
+              '</h5>
+   
+              </div>';
+            }
+              else{ 
+                echo '<div class="col-12 col-lg-6" id="reg-number">
                 <h3 class="alert alert-info">Pay your tuition fee Here</h3>   
-                <form method="GET"  id="paymentForm">
+                <form  method="POST" id="paymentForm">
                 <label for="full-name"><b>Full Name:</b></label>
                 <input type="text"  
                 title="Insert your full name" class="form-control" id="full-name" 
@@ -100,7 +137,7 @@
                 autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
                 <br>
                 <label for="phonenumber" class="form-label"><b>Phone Number</b></label>
-                <p><input type="tel"  class="form-control" name="phonenumber" id="phonenumber" autocomplete="on" placeholder="Example: 08012345678"
+                <p><input type="tel"  class="form-control" name="phonenumber" id="phonenumber" autocomplete="on" placeholder="Number must be same as phone number registered"
                   title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
                 <br>
                 <h5 class="alert alert-info"><b>Terms</b></h5>
@@ -125,14 +162,16 @@
                 <br>
                 
               </div>
-                <button onclick="payWithPaystack()" type="submit" class="btn btn-success" style="background-color: #172239; border-radius: 0px; border-color: #172239;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button onclick="payTuition()" type="submit" class="btn btn-success" style="background-color: #172239; border-radius: 0px; border-color: #172239;" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <i class="fas fa-money-bill-wave"></i> Proceed to Payment
               </button>
                 </form>             
                 <br>
                 
                 
-            </div>
+            </div>';
+              }
+            ?>
         </div>
     </div>            
           
@@ -155,7 +194,7 @@
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/fees.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
    
   </script>

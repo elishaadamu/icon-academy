@@ -1,18 +1,19 @@
 
 		const paymentForm = document.getElementById('paymentForm');
 
-paymentForm.addEventListener("submit", payWithPaystack, false);
+paymentForm.addEventListener("submit", payTuition, false);
 
-function payWithPaystack(e) {
+function payTuition(e) {
     e.preventDefault()
 	let fullname = document.getElementById("full-name").value;
 	let email = document.getElementById("email-address").value;
 	let phonenumber = document.getElementById("phonenumber").value
+  let amount = document.getElementById("amount").value
   let handler = PaystackPop.setup({
     key: 'pk_test_1db996ca9c92eb22d291b838b1646fb9171d806a', // Replace with your public key
     first_name: fullname,
     email: email,
-    amount: document.getElementById("amount").value * 100,
+    amount: amount * 100,
     phone: phonenumber,
     ref: 'IIPPSA'+Math.floor((Math.random() * 1000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
@@ -41,7 +42,7 @@ function payWithPaystack(e) {
       })
     },
     callback: function(response){
-      window.location = "dashboard.php?reference="+ response.reference;
+      window.location = "login-page.php?reference="+response.reference;
       let message = 'Reference: '+ "  "+ response.reference;
       let reference = response.reference;
       const Toast = Swal.mixin({
@@ -62,15 +63,23 @@ function payWithPaystack(e) {
         
       })
 	  var formData = {fullname:fullname, email:email, phonenumber:phonenumber, amount:amount, reference:reference }; 
+    console.log(formData)
 	  $.ajax({
-		   url:"localhost/icon-academy-1/connect-dashboard.php",
-		   type: "GET",
-		   data: formData,
-		   success: function (response)
-		   {
-   
-		   }
-		 })
+      url: "connect-dashboard.php",
+      type: "POST", // Use POST if you're sending data to the server
+      data: formData,
+      success: function (response) {
+          // Handle success response here
+          console.log("Data sent successfully");
+          console.log(response); // Log the response from the server for debugging
+      },
+      error: function (xhr, status, error) {
+          // Handle errors here
+          console.error("Error sending data:", error);
+      }
+  
+  });
+
     }
   });
   

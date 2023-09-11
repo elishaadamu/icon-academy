@@ -1,15 +1,15 @@
 <?php
 include 'config.php';
 
-$fname = mysqli_real_escape_string($conn, $_GET['fullname']);
+$fname = mysqli_real_escape_string($conn, $_POST['fullname']);
 
-$email = mysqli_real_escape_string($conn, $_GET['email']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
 
-$phonenumber = mysqli_real_escape_string($conn, $_GET['phonenumber']);
+$phonenumber = mysqli_real_escape_string($conn, $_POST['phonenumber']);
 
 $amount = "150000";
 
-$reference = mysqli_real_escape_string($conn, $_GET['reference']);
+$reference = mysqli_real_escape_string($conn, $_POST['reference']);
 
 mysqli_query($conn, "INSERT INTO tuition_table(fullname, email, phonenumber, 
 amount, reference)
@@ -17,5 +17,5 @@ amount, reference)
 
 mysqli_close($conn);
 
-header("Location: dashboard.php", true, 301); 
+header("Location: login-page.php", true, 301); 
 ?>

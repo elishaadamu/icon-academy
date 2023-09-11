@@ -25,7 +25,9 @@ $phonenumber = $_POST["phonenumber"];
             while($row = mysqli_fetch_assoc($result)){
              $_SESSION["firstname"] = $row["firstname"];
               $_SESSION["surname"] = $row["surname"];
+              $_SESSION["middlename"] = $row["middlename"];
               $_SESSION["id"] = $row["id"];
+              $_SESSION["phonenumber"] = $row["phonenumber"];
            }
   }
 
