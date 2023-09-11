@@ -99,7 +99,7 @@
                 title="Insert a valid email" class="form-control" id="email-address" 
                 autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
                 <br>
-                <label for="phone-number" class="form-label"><b>Phone Number</b></label>
+                <label for="phonenumber" class="form-label"><b>Phone Number</b></label>
                 <p><input type="tel"  class="form-control" name="phonenumber" id="phonenumber" autocomplete="on" placeholder="Example: 08012345678"
                   title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
                 <br>
@@ -135,11 +135,7 @@
             </div>
         </div>
     </div>            
-           
-
-    
-     
-
+          
   <footer>
     <div class="container">
       <div class="row">
