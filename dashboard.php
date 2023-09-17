@@ -179,7 +179,7 @@ include 'config.php';
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="https://iippsa.com.ng" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
+        <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
         </div>
       </div>
     </div>
