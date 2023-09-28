@@ -418,3 +418,22 @@ function payWithPaystack() {
  
   handler.openIframe();
 }
+  $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+      loop: true, // Enable loop mode
+      margin: 30, // Adjust the margin between items
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1, // Number of items to display at different screen widths
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+      },
+    });
+  });
+

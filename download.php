@@ -1,43 +1,3 @@
-<?php
-  if(isset($_POST["submit"])){
-   
-  session_start();
-  // declaring the session mechanism
-  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-      header("Location:login-page.php");
-  }
-  include 'config.php';
-
-$email = $_POST["email"];
-$phonenumber = $_POST["phonenumber"];
-
-    $sql = "SELECT * FROM student_registration_t WHERE email = '$email' AND phonenumber = '$phonenumber' limit 1 ";
-    
-    $result = mysqli_query($conn, $sql);
-
-    if(mysqli_num_rows($result) > 0){
-        session_start();
-            $_SESSION["loggedin"] = true;
-            $_SESSION["email"] = $email; 
-            $_SESSION["start"] = time();
-            $_SESSION["expire"] =  $_SESSION['start'] + (3000000);
-            header("Location: dashboard.php");
-            while($row = mysqli_fetch_assoc($result)){
-             $_SESSION["firstname"] = $row["firstname"];
-              $_SESSION["surname"] = $row["surname"];
-              $_SESSION["middlename"] = $row["middlename"];
-              $_SESSION["id"] = $row["id"];
-              $_SESSION["phonenumber"] = $row["phonenumber"];
-           }
-  }
-
-  $conn->close();
-
-  }
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +10,7 @@ $phonenumber = $_POST["phonenumber"];
     <link rel="shortcut icon" href="assets/images/Screenshot-2023-08-29-125908.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>IIPPS Academy - Login - page</title>
+    <title>Download Page</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -75,13 +35,13 @@ https://templatemo.com/tm-557-grad-school
        <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-    <a href="index.html" class="abbrevate"><em>IIPPS</em> Academy</a>
-    <p class="full-name">Icon International Policy and Professional Security Academy</p>
+      <a href="index.html" class="abbrevate"><em>IIPPS</em> Academy</a>
+      <p class="full-name">Icon International Policy and Professional Security Academy</p>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="index.html" class="external">Home</a></li>
+        <li><a href="/index.html" class="external">Home</a></li>
         <!-- <li class="has-submenu"><a href="#section2">About Us</a>
           <ul class="sub-menu">
             <li><a href="#section2">Who we are?</a></li>
@@ -90,48 +50,49 @@ https://templatemo.com/tm-557-grad-school
             <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
           </ul>
         </li> -->
-        <li><a href="application.html" class="external">Payment</a></li>
         <li><a href="login-page.php" class="external">Login</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="contact.html" class="external">Contact</a></li>
       </ul>
     </nav>
   </header>
-        
-    <div class="container" id="container">
-        <div class="row">
-            <div class="col-12 col-lg-7" id="formlogin">
-                
-                    <form action="login-page.php" method="POST">
-                    <h2 class='header'>Login Page </h2>
-                    <label for="email-address"><b>Email:</b></label>
-                    <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="login with a valid email" class="form-control" id="emailaddress" 
-                    autocomplete="on"  placeholder="e.g example123@gmail.com" name="email"  required aria-required="true">
-                    <br>
-                    <label for="phone-number" class="form-label"><b>Phone Number</b></label>
-                    <p><input type="tel"  class="form-control" name="phonenumber" id="phonenumber" autocomplete="on" placeholder="Example: 08012345678"
-                        title="Phone Number must be a number" pattern="[0-9]{11}"   class="form-control" required></p>
-                    <br>
-                    <button  type="submit" name="submit" class="btn btn-success" style="background-color: #172239; border-radius: 0px; border-color: #172239;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fas fa-paperclip"></i> Login
-                    </button>
-                    </form>
-                
-                
-            </div>
+  
+  <div class="content-main">
+
+      <h2 class="header">Download Form</h2>
+    <div class="line">
+    </div>
+  
+    <div class="content-container">
+        <!-- <div class="content-image">
+            <img class="image-login" width="650px" height="950px" src="./assets/img/b9fcbf977b334ca1ab5dd92d74b5b81f.jpg" alt="Security man">
+        </div> -->
+
+        <div class="content-signup">
+          
+          <h3 class="instruction">Set of instructions</h3>
+          <ol>
+              <li>Please click on button to download file.</li>
+              <li>Fill the form manually and send to this email: <b><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a> or contact: <a href="tel:07062094716">07062094716</a></b></li>    
+          </ol>
+          <br>
+          <a class="form" href="./assets/images/ICONINTERNATIONAL.pdf" download=""><button class="btn btn-success">Download File <i class="fas fa-download"></i></button></a>    
+        <br> 
+        <br>
+        <p class="whatsapp-link alert alert-danger">Click on the whatsapp icon to send a message to the admin <a href="https://wa.link/8qwh7u" target="_blank"><i class="fab fa-whatsapp-square"></i></a></p>  
+      </div>
         </div>
-    </div>            
-           
-
-    
-     
-
+        </div>
+      </div> 
+    </div> 
+</div>
+    </div>
+  </div>
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-12">
-        <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
+          <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
         </div>
       </div>
     </div>
@@ -149,5 +110,6 @@ https://templatemo.com/tm-557-grad-school
   <script>
    
   </script>
+
 </body>
 </html>

@@ -39,7 +39,8 @@ include 'config.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -84,12 +85,17 @@ include 'config.php';
             <div class="col-12" id="formPay">
               <center>
                   <h2 class='header'>Student Dashboard </h2>
+                  <div class="accordion" id="accordionExample">
+  
+  <br>
+</div>
               </center>
               <h5>Welcome!!! <b><?php echo $firstname.' '.$surname. ' '. $middlename;?></b> </h5>
               <br>
             </div>
             
             <div class="col-12 col-lg-6" id="reg-number">
+              
                     <?php if( $_SESSION["pnumber"] == $phonenumber){ 
                     echo '<h6 class="alert alert-info">  Your Registration number is: <b>IIPPSA/01/23/00' . $_SESSION["regnumber"] .  '</b></h6>';
                     } 
@@ -112,18 +118,18 @@ include 'config.php';
               <br>
                 
             </div>
+            <div class="col-12 col-lg-6" id="reg-number">
             <?php  if( $_SESSION["pnumber"] == $phonenumber){
               echo '
-              <div class="col-12 col-lg-6" id="reg-number">
               <h4>Congratulations, your are now an official student of the academy.</h4>
-              <h5 class="alert alert-success"> Your Registration number is IIPPSA/01/23/00' . $_SESSION["regnumber"]. 
+              <h5 class="alert alert-success"> Your Registration number is: <b>IIPPSA/01/23/00' . $_SESSION["regnumber"]. '</b>'.
               
               '</h5>
    
-              </div>';
+              ';
             }
               else{ 
-                echo '<div class="col-12 col-lg-6" id="reg-number">
+                echo '
                 <h3 class="alert alert-info">Pay your tuition fee Here</h3>   
                 <form  method="POST" id="paymentForm">
                 <label for="full-name"><b>Full Name:</b></label>
@@ -169,9 +175,35 @@ include 'config.php';
                 <br>
                 
                 
-            </div>';
+            ';
               }
             ?>
+            <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <b>List of Fees Paid</b>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse hide"  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                <?php  if( $_SESSION["pnumber"] == $phonenumber){
+              echo '
+                  <b>1. Tuition fee <span class="badge bg-success">Paid</span></b>
+              ';
+            }
+              else{ 
+                echo '
+                <b>1. Tuition fee <span class="badge bg-danger">Not Paid</span></b>
+            ';
+              }
+            ?>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
         </div>
     </div>            
           

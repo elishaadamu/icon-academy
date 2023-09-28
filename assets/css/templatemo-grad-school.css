@@ -89,7 +89,7 @@ a.menu-link { display: none; }
     font-size: 36px;
     color: #fff;
     padding-right: 20px;
-    padding-top: 10px;
+    margin-top: -12px;
   }
   nav[role="navigation"] {
     clear: both;
@@ -162,11 +162,27 @@ a.menu-link { display: none; }
   .main-menu li {
       margin-left: 5px!important;
   }
+  .main-header {
+    background-color: rgba(22,34,57,0.95);
+    height: 76px !important;
+    position: fixed;
+    z-index: 12;
+    width: 100%;
+    top: 0;
 }
-
+.header{
+  text-align: center;
+  margin-bottom: 20px !important;
+  margin-top: 120px !important;
+}
+}
+.header{
+  text-align: center;
+  margin-bottom: 20px;
+}
 .main-header {
     background-color: rgba(22,34,57,0.95);
-    height: 80px;
+    height: 100px;
     position: fixed;
     z-index: 12;
     width: 100%;
@@ -494,7 +510,6 @@ section.why-us {
     background-color: #172238;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 100px;
 }
 
 #tabs {
@@ -885,10 +900,10 @@ section.courses .owl-carousel button.active {
 /* Video */
 
 section.video {
-    background-image: url(../images/video-bg.jpg);
+    background-image: url(../images/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #172238;
+    background-color: transparent;
     padding: 120px 0px;
 }
 
@@ -1594,12 +1609,8 @@ footer p a:hover {
 }
 @media screen and (max-width: 950px) {
   .content-main{
-    box-shadow: 0px 0px 0px rgb(255, 255, 255);
     width: 400px !important;
     height: 100% !important;
-    border-radius: 10px;
-    border-left: 1px solid rgb(103, 186, 241);
-    border-top: 1px solid rgb(103, 186, 241);
     margin-top: 70px !important;
     margin-left:-43px !important;
     margin-right: -20px;
@@ -1613,8 +1624,42 @@ footer p a:hover {
   justify-content: center;
   justify-content: space-between;
   align-items: flex-start;
-  
 }
+#tabs ul li a:after {
+    transition: all 0.3s;
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -5px;
+}
+.why-join-us{
+  margin-top: 5px !important;
+
+}
+#tabs ul li a:before {
+  transition: all 0.3s;
+  width: 25px;
+  height: 25px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -9px;
+}
+.tabs-courses{
+  color: white;
+}
+#container-1{
+  margin: 120px 30px 300px 30px;
+}
+
 #formPay{
   margin-left:  0px !important;
 }
@@ -1630,17 +1675,25 @@ footer p a:hover {
 }
 .full-name{
   margin-top: -30px;
-  margin-left: -20px;
+  margin-left: -25px;
   color: white;
-  font-size: 8.5px;
+  font-size: 10px;
+}
+
+
+.main-header .logo{
+  margin-left: -33px !important;
+  margin-top: 0px;
+  width: 100px;
+  height: auto;
+}
+.full-name{
+ margin-left: 80px !important; 
+ font-size: 13px !important;
 }
 }
   
-.header{
-  text-align: center;
-  margin: 20px 0px 30px 0px;
-  color: rgb(11, 129, 184);
-}
+
 .line{
   margin: 0px 20px 0px 20px;
   font-size: 2px;
@@ -1652,9 +1705,6 @@ footer p a:hover {
 .content-main{
   width: 1100px;
   height: 100%;
-  border-radius: 10px;
-  border-left: 1px solid rgb(103, 186, 241);
-  border-top: 1px solid rgb(103, 186, 241);
   margin-top: 120px;
   margin-left:86px;
   margin-bottom: 80px;
@@ -1785,8 +1835,30 @@ button:hover {
   margin-bottom: -20px;
 }
 .full-name{
-  margin-top: -30px;
+  margin-top: 18px;
   color: white;
-  font-size: 8.5px;
+  font-size: 15px;
+  margin-left: 150px;
+  position: absolute;
+  
+
 }
 
+#container-footer{
+ bottom: 0;
+}
+.whatsapp-link{
+  font-size: 20px;
+
+}
+.fa-whatsapp-square{
+  font-size: 35px;
+}
+.why-join-us{
+  margin-top: -65px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 30px;
+}
