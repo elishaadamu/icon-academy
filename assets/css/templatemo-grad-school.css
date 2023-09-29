@@ -1547,15 +1547,14 @@ section.contact form button {
 
 footer {
     background-color: #152036;
-    text-align: center;
+    margin-top: 20px;
 }
 
 footer p {
     margin-bottom: 0px;
-    padding: 25px 0px;
+    padding: 10px 0px;
     color: #fff;
     font-size: 13px;
-    text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -1692,6 +1691,20 @@ footer p a:hover {
 .full-name{
  margin-left: 80px !important; 
  font-size: 13px !important;
+}
+#row{
+  display: flex;
+  flex-direction: column;
+}
+.social{
+  display:flex;
+  column-gap: 20px;
+  justify-content: space-between;
+  width: 200px;
+  margin-left: 3% !important;
+}
+#footer-container{
+  margin-left: 20px;
 }
 }
   
@@ -1863,4 +1876,30 @@ button:hover {
   letter-spacing: 1px;
   color: #fff;
   margin-bottom: 30px;
+}
+
+footer{
+  color: white !important;
+}
+.social{
+  display:flex;
+  column-gap: 20px;
+  width: 200px;  
+}
+.fa-facebook, .fa-linkedin, .fa-whatsapp{
+  font-size: 20px;
+  margin-top: 10px;
+  
+}
+.fa-facebook{
+  color: #3b5998;
+}
+.fa-linkedin{
+  color:#0072b1;
+}
+.fa-whatsapp{
+  color:#075e54;
+}
+.header-footer{
+  color: #f5a425;
 }
