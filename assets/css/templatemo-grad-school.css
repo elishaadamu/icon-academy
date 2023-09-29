@@ -1547,7 +1547,7 @@ section.contact form button {
 
 footer {
     background-color: #152036;
-    margin-top: 20px;
+    margin-top: 1px;
 }
 
 footer p {
@@ -1698,10 +1698,8 @@ footer p a:hover {
 }
 .social{
   display:flex;
-  column-gap: 20px;
-  justify-content: space-between;
   width: 200px;
-  margin-left: 3% !important;
+  margin-left: 1% !important;
 }
 #footer-container{
   margin-left: 20px;
