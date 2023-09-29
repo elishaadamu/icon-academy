@@ -1702,7 +1702,15 @@ footer p a:hover {
   margin-left: 1% !important;
 }
 #footer-container{
-  margin-left: 20px;
+  margin-left: 5px;
+}
+#tabs h4 {
+  margin-top: 100px !important;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 30px;
 }
 }
   
