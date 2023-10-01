@@ -1712,6 +1712,12 @@ footer p a:hover {
   color: #fff;
   margin-bottom: 30px;
 }
+#container{
+  margin: 0px 0px 20px 0px !important;
+}
+/* .img-container{
+  display: none;
+} */
 }
   
 
@@ -1850,7 +1856,7 @@ button:hover {
   margin-left: 300px;
 }
 #container{
-  margin: 80px 0px 200px 0px;
+  margin: 120px 0px 100px 50px;
 }
 .abbrevate{
   margin-bottom: -20px;
@@ -1909,3 +1915,4 @@ footer{
 .header-footer{
   color: #f5a425;
 }
+
