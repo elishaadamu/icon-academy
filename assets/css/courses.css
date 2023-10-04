@@ -1,0 +1,138 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url('../../assets/images/choosing-bg.jpg') no-repeat center/cover fixed;
+    color: white;
+}
+
+body section h1 {
+    text-align: center;
+    font-size: 1.9rem;
+    margin: 2rem 0;
+}
+
+section .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    gap: 1.7rem;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.tabs p {
+    padding: 1rem .5rem;
+    border-radius: 12rem;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.tabs p.active::before {
+    content: '';
+    width: 5rem;
+    height: .2rem;
+    margin: 0 auto;
+    background: orangered;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+section .courses {
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.courses .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.courses .container .course {
+    background: hsl(219, 44%, 20%);
+    width: 15rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    text-align: center;
+}
+
+.course img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+.course .course-info {
+    height: 50%;
+}
+
+.course-info h4 {
+    font-size: 1.1rem;
+    margin: .7rem 0;
+    text-transform: capitalize;
+}
+
+.course-info p {
+    font-size: .8rem;
+    margin: .7rem 0;
+
+}
+
+.course-info p::first-letter {
+    text-transform: capitalize;
+}
+
+.course-info button {
+    border: none;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    font-weight: 600;
+    color: white;
+    background: orangered;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+
+@media (max-width:760px) {
+    .tabs {
+        gap: .7rem !important;
+        text-align: center;
+        font-size: .8rem;
+        word-spacing: -2px;
+        padding: .5rem;
+    }
+
+    .tabs p {
+        padding: 1rem 0;
+    }
+
+    .courses {
+        padding: 0 .5rem !important;
+    }
+
+    .courses .container {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    }
+
+    .courses .container .course {
+        width: fit-content;
+    }
+}
