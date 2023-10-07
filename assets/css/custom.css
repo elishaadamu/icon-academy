@@ -1,0 +1,33 @@
+.vision-container{
+    color: white !important;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    width: 100%;
+    margin-left: 9%;
+}
+.first-div, .second-div, .third-div{
+    border: 1px solid  #f5a425;
+    margin-top: 20px;
+    width: 500px;
+    height: 400px;
+    text-align: left;
+    font-size: 18px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(23, 8, 8);
+}
+.third-div-inner{
+    text-align: left;
+    margin: 40px 0px 0px 0px;
+}
+
+/* icons styling */
+.fa-low-vision, .fa-thumbtack, .fa-creative-commons-sampling-plus{
+    font-size: 30px;
+    margin:20px 0px 30px 0px;
+    text-align: center;
+}
+.text-content-idea{
+    font-size: 16px;
+}
