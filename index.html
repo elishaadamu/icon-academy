@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="assets/images/Screenshot-2023-08-29-125908.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>IIPPS Academy</title>
     
     <!-- Bootstrap core CSS -->
@@ -45,14 +47,22 @@ https://templatemo.com/tm-557-grad-school
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="index.html" class="external">Home</a></li>
-        <!-- <li class="has-submenu"><a href="#section2">About Us</a>
+        <li class="has-submenu"><a href="#section2">Apply Courses</a>
           <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
+            <li><a href="certificate-description.html" class="external">Certificate Course</a></li>
+            <li><a href="diploma-description.html" class="external">Diploma Course</a></li>
+            <li><a href="advanced-diploma-description.html" class="external">Advanced Diploma Course</a></li>
           </ul>
-        </li> -->
+        </li>
+        <li class="has-submenu"><a href="#section2">Portal</a>
+          <ul class="sub-menu">
+            <li><a href="certificate.html" class="external">About Us</a></li>
+            <li><a href="diploma.html" class="external">Courses</a></li>
+            <li><a href="advanced-diploma.html" class="external">Management Team</a></li>
+            <li><a href="advanced-diploma.html" class="external">Our Departments</a></li>
+            <li><a href="advanced-diploma.html" class="external">Governing Board of IIPPSA</a></li>
+          </ul>
+        </li>
         <!-- <li><a href="application.html" class="external">Payment</a></li> -->
         <li><a href="login-page.php" class="external">Login</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
@@ -109,10 +119,14 @@ https://templatemo.com/tm-557-grad-school
       </div>
       <br><br>
     </section>
-    <hr style="border: 1px solid white; margin-bottom: 0px; margin-top: 0px;">
     <!-- About us section -->
     <section class="section why-us">
-      <br><br>
+      <hr style="border: 0.5px solid white; margin-bottom: 0px; margin-top: 0px;">
+      <div class="col-md-12">
+        <div class="section-heading department-header">
+          <h2 style="font-weight: bolder;">About Us</h2>
+        </div>
+      </div>
       <div class="container about-us-container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-6 about-us-left">
@@ -149,6 +163,7 @@ https://templatemo.com/tm-557-grad-school
     </section>
     <!-- Department section -->
    <section class="section why-us">
+    <br><br><br>
     <hr style="border: 0.5px solid white; margin-bottom: 0px; margin-top: 0px;">
     <div class="col-md-12">
       <div class="section-heading department-header">
@@ -220,9 +235,7 @@ https://templatemo.com/tm-557-grad-school
 
   <section class="section why-us" data-section="section2">
     <br><br>
-
     <hr style="border: 0.5px solid white; margin-bottom: 0px; margin-top: 0px;">
-
     <div class="container">
       <div class="row">
        
@@ -256,7 +269,8 @@ https://templatemo.com/tm-557-grad-school
                     <h4 >Top Level Management</h4>
                     <h5 style="color: white;">Governing Council:</h5>
                    <ol style="color: rgb(255, 255, 255); margin-top: 5px;">
-                    <li><a href="#" target="_blank" rel="noopener noreferrer">Major General Olayinka Oluwaseun Oshinowo (rtd) <b>(Chairman)</b></a></li>
+                    <!-- Button trigger modal -->
+                    <li><a href="#" target="_blank"  rel="noopener noreferrer">Major General Olayinka Oluwaseun Oshinowo (rtd) <b>(Chairman)</b></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer">PROFESSOR SHILKYIL S. Sylvester (SAN) <b>(Director Of Studies)</b></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer">PROFESSOR Mrs GB Babudoh. <b>(Deputy Rector Academic)</b></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer">PROFESSOR Daskyes Y. Gulleng. <b>(Dean Of Studies)</b></a></li>
@@ -294,11 +308,13 @@ https://templatemo.com/tm-557-grad-school
   </style>
 
   <section class="section courses" data-section="section4">
+    <br><br><br>
+    <hr style="border: 0.5px solid white; margin-bottom: 0px; margin-top: 0px;">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Choose Your Course</h2>
+            <h2>Our Courses</h2>
           </div>
         </div>
         <div class="owl-carousel owl-theme">
@@ -503,6 +519,7 @@ https://templatemo.com/tm-557-grad-school
   </section>
  
   <section class="section contact" data-section="section6">
+    <hr style="border: 0.5px solid white; margin-bottom: 0px; margin-top: 0px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -563,7 +580,6 @@ https://templatemo.com/tm-557-grad-school
            <h5 class="header-footer">Management</h5>
            <li><a href="index.html" style="color: white;">Organisational Structure</a></li>
            <li><a href="leadership.html" style="color: white;">Management Team</a></li>
-           <li><a href="login-page.php" style="color: white;">Login</a></li>
           </ul>
          </div>
         <div class="col-lg-3 col-12">

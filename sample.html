@@ -5,107 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject Grades Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </head>
 <body>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+    ## Hello
+    
+    <p>An HTML paragraph containing <md-span>*italic*</md-span> text.</p>
 
-h1 {
-    margin-bottom: 20px;
-}
-
-form {
-    width: 80%;
-    margin: 0 auto;
-}
-
-label, select, button {
-    display: block;
-    margin-bottom: 10px;
-}
-
-#subjectsContainer {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.subject-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.subject-row select, .subject-row input {
-    margin-right: 10px;
-}
-
-    </style>
-    <h1>Subject Grades Form</h1>
-    <form id="gradeForm" action="c.php" method="post">
-        <label for="certificate">Select Certificate:</label>
-        <select id="certificate" name="certificate">
-            <option value="ssce">SSCE</option>
-            <option value="waec">WAEC</option>
-            <!-- Add more options as needed -->
-        </select>
-        <div id="subjectsContainer">
-            <!-- Subjects and grades will be dynamically added here -->
-        </div>
-        <button type="button" id="addSubject">Add Subject</button>
-        <button type="submit">Submit</button>
-    </form>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const addSubjectButton = document.getElementById("addSubject");
-    const subjectsContainer = document.getElementById("subjectsContainer");
-
-    addSubjectButton.addEventListener("click", function () {
-        const subjectRow = document.createElement("div");
-        subjectRow.classList.add("subject-row");
-
-        const subjectInput = document.createElement("input");
-        subjectInput.type = "text";
-        subjectInput.placeholder = "Subject";
-        subjectRow.appendChild(subjectInput);
-
-        const gradeInput = document.createElement("input");
-        gradeInput.type = "text";
-        gradeInput.placeholder = "Grade";
-        subjectRow.appendChild(gradeInput);
-
-        subjectsContainer.appendChild(subjectRow);
-    });
-
-    const gradeForm = document.getElementById("gradeForm");
-    gradeForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        // You can collect and process the form data here
-        const certificate = document.getElementById("certificate").value;
-
-        const subjects = [];
-        const subjectRows = document.querySelectorAll(".subject-row");
-        subjectRows.forEach(row => {
-            const subject = row.querySelector("input[type='text'][placeholder='Subject']").value;
-            const grade = row.querySelector("input[type='text'][placeholder='Grade']").value;
-            subjects.push({ subject, grade });
-        });
-
-        // Now you can do something with the collected data, like sending it to a server
-        console.log("Certificate:", certificate);
-        console.log("Subjects:", subjects);
-
-        // Reset the form if needed
-        gradeForm.reset();
-    });
-});
-
-    </script>
 </body>
 </html>

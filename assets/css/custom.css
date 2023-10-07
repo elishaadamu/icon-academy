@@ -1,3 +1,20 @@
+.main-menu li .sub-menu {
+    position: absolute;
+    width: 252px;
+    background-color: #18233a;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.main-menu li .sub-menu li:hover {
+    display: block;
+    line-height: 20px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #121b2f;
+    background-color: rgb(7, 29, 48);
+}
 .vision-container{
     color: white !important;
     display: flex;
@@ -58,8 +75,10 @@
     color: white;
 }
 .about-us-image{
-    width: 600px !important;
-    margin-top: -40px;
+    width: 470px !important;
+    margin-top: 15px;
+    box-shadow: 5px 5px 20px rgb(23, 8, 8);
+    border-color: #f5a425 !important;
 }
 .inner-content{
     margin-top: 70px;
@@ -87,4 +106,7 @@
 }
 .card-text{
     color: rgb(255, 255, 255);
+}
+.item{
+    height: 500px !important;
 }
