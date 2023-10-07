@@ -1,0 +1,42 @@
+@media screen and (max-width: 676px) {
+    .vision-container{
+        color: white !important;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+    .first-div, .second-div, .third-div{
+        border: 1px solid  #f5a425;
+        margin-top: 20px;
+        width: 500px;
+        height: 450px;
+        text-align: left;
+        font-size: 18px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 20px rgb(23, 8, 8);
+    }
+    .second-div, .third-div{
+       margin-left: 0px;
+    }
+    .text-content-idea{
+        font-size: 18px;
+        list-style: circle;
+        margin-top: 50px;
+    }
+    .about-us-left{
+        border: 1px solid  #f5a425;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        font-size: 18px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 20px rgb(23, 8, 8);
+        text-align: center;
+        color: white;
+    }
+    .about-us-image{
+        width: 400px !important;
+        margin: -20px;
+    }
+}
