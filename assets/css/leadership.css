@@ -21,7 +21,7 @@ body {
 
 .leaders {
     margin: auto;
-    max-width: 67rem;
+    max-width: 67rem; 
 }
 
 .leaders .member {
@@ -88,6 +88,5 @@ body {
     .member-img img {
         max-width: 15rem;
     }
-
 
 }
