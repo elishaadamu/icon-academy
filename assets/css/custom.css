@@ -6,6 +6,7 @@
     width: 100%;
 }
 .first-div, .second-div, .third-div{
+    color: white;
     border: 1px solid  #f5a425;
     margin-top: 20px;
     width: 600px;
@@ -72,4 +73,18 @@
     background-color: #f5a425;
     color: rgb(255, 255, 255) !important;
     border-color: #f5a425;
+}
+.department-header{
+
+    margin-bottom: 0px !important;
+}
+.card{
+    background-color: transparent;
+    margin-top: 50px;
+    border-color: #f5a425;
+    box-shadow: 5px 5px 20px rgb(23, 8, 8);
+    height: 350px;
+}
+.card-text{
+    color: rgb(255, 255, 255);
 }
