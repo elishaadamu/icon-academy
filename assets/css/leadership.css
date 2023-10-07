@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url('../images/choosing-bg.jpg') no-repeat center/cover fixed;
+    color: white;
+}
+
+.banner {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/courses-03.jpg') no-repeat center/cover;
+    margin: 2rem 0;
+    color: #f5a425;
+    margin-top:7rem ;
+}
+
+.leaders {
+    margin: auto;
+    max-width: 67rem;
+}
+
+.leaders .member {
+    display: grid;
+    grid-template-columns: 30% auto;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem 0;
+}
+
+.member-img {
+    text-align: center;
+}
+
+.member-img img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 6px solid #f5a425;
+    border-radius: 50%;
+}
+
+.member-img h4 {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.member-img span {
+    font-size: .95rem;
+}
+
+
+.member-profile h2 {
+    background: #f5a425;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.member-profile p {
+    margin-bottom: 1rem;
+}
+
+.member-profile p::first-letter {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+@media (max-width:700px) {
+    .leaders .member {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem .7rem;
+        border-bottom: 2px solid #f5a425;
+    }
+
+    .leaders .member:last-child {
+        border-bottom: none;
+    }
+
+    .member-img img {
+        max-width: 15rem;
+    }
+
+
+}
