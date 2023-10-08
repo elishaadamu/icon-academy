@@ -26,6 +26,7 @@ body {
     padding: 1rem;
     flex-direction: row-reverse;
     align-items: center;
+    margin: 7rem 0;
 }
 
 .hero>div {
@@ -84,6 +85,7 @@ li img {
     .hero {
         flex-direction: column;
         padding: .5rem !important;
+        margin: 3rem 0;
     }
 
     .hero img {

@@ -51,7 +51,7 @@ body {
 }
 
 .member-img span {
-    font-size: .95rem;
+    font-size: .8rem;
 }
 
 
@@ -64,6 +64,7 @@ body {
 
 .member-profile p {
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .member-profile p::first-letter {
