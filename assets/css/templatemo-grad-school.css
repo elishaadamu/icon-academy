@@ -906,7 +906,10 @@ section.video {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent;
-    padding: 120px 0px;
+    padding: 330px 0px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+      
 }
 
 section.video .left-content {
