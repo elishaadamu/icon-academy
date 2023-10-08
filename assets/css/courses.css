@@ -26,7 +26,7 @@ body {
     align-items: center;
     gap: 2rem;
     flex-direction: row-reverse;
-    margin: 2rem 0 4rem 0;
+    margin: 7rem 0;
 }
 
 .hero img {
@@ -142,6 +142,7 @@ section h2 {
 @media (max-width:670px) {
     .hero {
         flex-direction: column;
+        margin: 3rem 0;
     }
 
     .hero>div {
