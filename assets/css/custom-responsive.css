@@ -42,4 +42,7 @@
     .about-us-button{
         margin-bottom: 40px;
     }
+    .learn-more{
+        margin: 20px 0px 0px -294px !important;
+    }
 }

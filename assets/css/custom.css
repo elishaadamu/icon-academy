@@ -118,3 +118,26 @@
 .item{
     height: 500px !important;
 }
+.learn-more{
+    background-color: #121b2f;
+    border-color: #f5a425;
+    margin: 20px 0px 0px -160px !important;
+    justify-content: center;
+}
+.learn-more:hover{
+    background-color: #030306;
+    color: #f5a425;
+}
+.learn-more a{
+    color: #f5a425 !important;
+}
+section.courses .owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: -170px;
+}
+.courses-header{
+    background: transparent;
+    margin: 0px 200px 0px 200px;
+    border-radius: 10px;
+    border:1px solid #f5a425;
+}
