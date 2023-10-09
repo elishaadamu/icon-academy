@@ -5,6 +5,9 @@
         flex-direction: column;
         width: 85%;
     }
+    .vision-container .row .col-12{
+       max-width: 90%;
+    }
     .first-div, .second-div, .third-div{
         border: 1px solid  #f5a425;
         margin-top: 20px;
@@ -44,5 +47,28 @@
     }
     .learn-more{
         margin: 20px 0px 0px -294px !important;
+    }
+    .courses-header {
+        background: transparent;
+        margin: 0px -35px 0px -35px;
+        border-radius: 10px;
+        border: 1px solid #f5a425;
+    }
+    .governance{
+        margin: 0px 0px 50px 0px !important;
+        color: white;
+    }
+    .governance .side-design{
+        display: none;
+    }
+    .main-design{
+        margin-top: 25px;
+        border: 1px solid #f5a425;
+        height: 450px !important;
+        width: 350px !important;
+        text-align: center;
+        box-shadow: 5px 5px 20px rgb(23, 8, 8);
+        color: white;
+        font-size: 22px;
     }
 }

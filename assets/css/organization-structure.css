@@ -1,0 +1,56 @@
+.governance{
+    margin: 0px 50px 50px 50px;
+    color: white;
+}
+.side-design{
+    height: 400px;
+    background-color: #f5a425;
+    box-shadow: 5px 5px 20px rgb(23, 8, 8);
+
+}
+.main-design{
+    margin-top: 25px;
+    border: 1px solid #f5a425;
+    height: 350px;
+    text-align: center;
+    box-shadow: 5px 5px 20px rgb(23, 8, 8);
+    color: white;
+}
+.main-design h3{
+    margin-top: 70px;
+}
+.main-design p{
+    text-align: left;
+     margin-top: 50px; 
+     font-size: 15px;
+}
+.governance h5{
+    margin-top: 50px;
+    font-size: 22px;
+}
+.governance ul{
+   list-style: circle;
+   margin-top: 30px;
+   margin-left: 50px;
+}
+.governance li::marker{
+    color: #f5a425;
+    font-size: 1.5em;
+    
+ }
+.governance li{
+    margin-top: 10px;
+ }
+ .governance .justify-content-center .table{
+    margin-top: 50px;
+    color: white;
+ }
+ .governance .justify-content-center .header-row{
+    color: #121b2f;
+    background-color: #f5a425;
+    border-radius:10px;
+ }
+ .governance p{
+    margin: 30px 0px 0px 50px;
+    font-size: 15px;
+}
