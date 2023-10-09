@@ -437,10 +437,3 @@ function payWithPaystack() {
     });
   });
 
-// Script for footer section
-$(function() {
-	$("#headerHtml").load("header.html");
- });
-$(function() {
-	$("#footerHtml").load("footer.html");
- });

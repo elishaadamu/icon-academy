@@ -33,23 +33,34 @@ https://templatemo.com/tm-557-grad-school
   </head>
 <body>
        <!--header-->
-  <header class="main-header clearfix" role="header">
-    <div class="logo">
-      <a href="index.html" class="abbrevate"><em>IIPPS</em> Academy</a>
-      <p class="full-name">Icon International Policy and Professional Security Academy</p>
+       <header class="main-header clearfix" role="header">
+    <div class="flex-logo">
+      <a href="index.html" class="abbrevate"><img class="logo" width="150px" height="auto"
+          src="assets/images/background-removebg-preview.png" alt=""></a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="/index.html" class="external">Home</a></li>
-        <!-- <li class="has-submenu"><a href="#section2">About Us</a>
+        <li><a href="index.html" class="external">Home</a></li>
+        <li class="has-submenu"><a href="#section2">Apply Courses</a>
           <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
+            <li><a href="certificate.html" class="external">Certificate Course</a></li>
+            <li><a href="diploma.html" class="external">Diploma Course</a></li>
+            <li><a href="advanced-diploma.html" class="external">Advanced Diploma Course</a></li>
           </ul>
-        </li> -->
+        </li>
+        <li class="has-submenu"><a href="#section2">Portal</a>
+          <ul class="sub-menu">
+            <li><a href="/courses/courses.html" class="external">Courses</a></li>
+            <li><a href="management-team.html" class="external">Management Team</a></li>
+            <li><a href="departments.html" class="external">Our Departments</a></li>
+            <li><a href="organization-structure.html" class="external">Organisation Structure</a></li>
+            <li><a href="governing-body.html" class="external">Governing body</a></li>
+            <li><a href="facilities.html" class="external">Facilities</a></li>
+            <li><a href="departments.html" class="external">Departments</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="application.html" class="external">Payment</a></li> -->
         <li><a href="login-page.php" class="external">Login</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="contact.html" class="external">Contact</a></li>
@@ -88,52 +99,8 @@ https://templatemo.com/tm-557-grad-school
 </div>
     </div>
   </div>
-  <footer>
-    <br>
-    <br>
-    <div class="container" id="footer-container">
-      <div class="row" id="row">
-        <div class="col-lg-4 col-12">
-          <h5 class="header-footer">ADDRESS</h5>
-                    <br>
-                    <h6><b>JOS OFFICE:</b></h6>
-                    <p>Grace Land International high school Bassa.</p>
-                    <h6><b>ABUJA OFFICE:</b></h6>
-                    <p>Suite 305, Ebenezer Plaza, Area 1 Garki, FCT Abuja, Nigeria.</p>
-        </div>
-        <div class="col-lg-4 col-12" style="margin-bottom: 20px;">
-          <h5 class="header-footer">OUR MISSION</h5>
-          <p>IIPPSA's purpose is to define the future of Professional security and Policy.</p>
-          <p>We are guided by a distinct set of values—non-partisanship, independent thought, innovative thinking, cross-disciplinary sponsorship, integrity and professionalism, and talent development.</p>
-        </div>
-        <div class="col-lg-2 col-12">
-          <h5 class="header-footer">Navigation</h5>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="login-page.php">Login</a></li>
-        </div>
-        <br>
-        <div class="col-lg-2 col-12">
-          <h5 class="header-footer">CONTACT US</h5>
-            <h6><b>Contact:</b></h6><p><a href="tel:07062094716">07062094716</a> | <a href="tel:09122749660">09122749660</a></p>
-            <h6><b>E-mail:</b></h6><p><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a></p>
-        </div>
-       
-      <div class="row">
-        <div class="col-12">
-          <h5 class="header-footer">Social Links:</h5>
-          <div class="social">
-            
-              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-              <a href="https://wa.link/n3va6g" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-          </div>
-          <hr style="border: 1px solid white;">
-          <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
-      </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footerHtml"></div>
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://js.paystack.co/v1/inline.js"></script> 

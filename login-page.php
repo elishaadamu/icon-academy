@@ -73,23 +73,33 @@ https://templatemo.com/tm-557-grad-school
   </head>
 <body>
        <!--header-->
-  <header class="main-header clearfix" role="header">
+       <header class="main-header clearfix" role="header">
     <div class="flex-logo">
-      <a href="index.html" class="abbrevate"><img class="logo" width="140px" height="auto" src="assets/images/background-removebg-preview.png" alt=""></a>
-      <p class="full-name">Icon International Policy <br> and Professional Security Academy</p>
+      <a href="index.html" class="abbrevate"><img class="logo" width="150px" height="auto"
+          src="assets/images/background-removebg-preview.png" alt=""></a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="index.html" class="external">Home</a></li>
-        <!-- <li class="has-submenu"><a href="#section2">About Us</a>
+        <li class="has-submenu"><a href="#section2">Apply Courses</a>
           <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
+            <li><a href="certificate.html" class="external">Certificate Course</a></li>
+            <li><a href="diploma.html" class="external">Diploma Course</a></li>
+            <li><a href="advanced-diploma.html" class="external">Advanced Diploma Course</a></li>
           </ul>
-        </li> -->
+        </li>
+        <li class="has-submenu"><a href="#section2">Portal</a>
+          <ul class="sub-menu">
+            <li><a href="/courses/courses.html" class="external">Courses</a></li>
+            <li><a href="management-team.html" class="external">Management Team</a></li>
+            <li><a href="departments.html" class="external">Our Departments</a></li>
+            <li><a href="organization-structure.html" class="external">Organisation Structure</a></li>
+            <li><a href="governing-body.html" class="external">Governing body</a></li>
+            <li><a href="facilities.html" class="external">Facilities</a></li>
+            <li><a href="departments.html" class="external">Departments</a></li>
+          </ul>
+        </li>
         <!-- <li><a href="application.html" class="external">Payment</a></li> -->
         <li><a href="login-page.php" class="external">Login</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
@@ -97,7 +107,6 @@ https://templatemo.com/tm-557-grad-school
       </ul>
     </nav>
   </header>
-  
     <div class="container" id="container">
       <div class="row">
         <div class="col-lg-6 col-12 ">
