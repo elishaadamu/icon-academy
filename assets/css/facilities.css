@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url('../images/choosing-bg.jpg') no-repeat center/cover fixed;
+    color: white;
+}
+
+.banner {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/courses-03.jpg') no-repeat center/cover;
+    margin: 2rem 0;
+    color: #f5a425;
+    margin-top: 7rem;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: .5rem;
+}
+
+.hero .block {
+    background: #f5a425;
+    width: 16rem;
+    height: 30rem;
+
+}
+
+.hero .content {
+    border: 1px solid #f5a425;
+    width: 60%;
+    padding: .5rem;
+    text-align: center;
+    height: 27rem;
+    display: grid;
+    place-content: center;
+    box-shadow: 5px 5px 20px rgb(23 8 8);
+}
+
+h2 {
+    margin-bottom: .7rem;
+}
+
+.departments {
+    max-width: 65rem;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.department {
+    margin-bottom: 5rem;
+}
+
+.department h3 {
+    padding: 1rem;
+    text-align: center;
+    background: #f5a425;
+    margin: 2rem 0;
+}
+
+.department .info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.odd {
+    flex-direction: row-reverse;
+}
+
+.department .info img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:670px) {
+    .block {
+        display: none;
+    }
+
+    .hero .content {
+        border: none;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        box-shadow: none;
+        height: fit-content;
+    }
+
+    .departments {
+        padding: .5rem;
+    }
+
+    .info img {
+        width: 100% !important;
+    }
+
+    .department .info {
+        flex-direction: column-reverse;
+    }
+}
