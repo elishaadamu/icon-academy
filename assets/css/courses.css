@@ -81,6 +81,7 @@ section h2 {
     border-radius: .7rem;
     padding: .5rem;
     text-align: center;
+    border: 1px solid #f5a425;
 }
 
 .course img {
