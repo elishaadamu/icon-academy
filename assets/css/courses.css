@@ -78,14 +78,9 @@ section h2 {
     /* background: hsl(219, 44%, 20%); */
     border-radius: .7rem;
     padding: .5rem;
-<<<<<<< HEAD
     box-shadow: 5px 5px 20px rgb(23 8 8);
     border: 1px solid #f5a425;
 
-=======
-    text-align: center;
-    border: 1px solid #f5a425;
->>>>>>> a4fe64dfd7aaab26dd3652cdf8290f3a7825be16
 }
 
 .course img {
