@@ -141,3 +141,21 @@ section.courses .owl-carousel .owl-dots {
     border-radius: 10px;
     border:1px solid #f5a425;
 }
+footer li{
+    list-style: none;
+}
+footer li a{
+    color: white ;
+}
+.governance table{
+    box-shadow: 5px 5px 20px rgb(23, 8, 8);
+    border: 1px solid #f5a425;
+}
+.governance .header-governance{
+    border: 1px solid #f5a425;
+    text-align: center;
+}
+.governance .header-governance h3{
+    padding: 20px 20px;
+    font-weight: bold;
+}

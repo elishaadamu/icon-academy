@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <title>IIPPS Academy</title>
 
   <!-- Bootstrap core CSS -->
@@ -31,46 +32,19 @@ TemplateMo 557 Grad School
 https://templatemo.com/tm-557-grad-school
 
 -->
+<script>
+  $(function() {
+	$("#headerHtml").load("header.html");
+ });
+ $(function() {
+	$("#footerHtml").load("footer.html");
+ });
+</script>
 </head>
 
 <body>
-  <style>
-
-  </style>
-
   <!--header-->
-  <header class="main-header clearfix" role="header">
-    <div class="flex-logo">
-      <a href="index.html" class="abbrevate"><img class="logo" width="150px" height="auto"
-          src="assets/images/background-removebg-preview.png" alt=""></a>
-    </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
-    <nav id="menu" class="main-nav" role="navigation">
-      <ul class="main-menu">
-        <li><a href="index.html" class="external">Home</a></li>
-        <li class="has-submenu"><a href="#section2">Apply Courses</a>
-          <ul class="sub-menu">
-            <li><a href="certificate-description.html" class="external">Certificate Course</a></li>
-            <li><a href="diploma-description.html" class="external">Diploma Course</a></li>
-            <li><a href="advanced-diploma-description.html" class="external">Advanced Diploma Course</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu"><a href="#section2">Portal</a>
-          <ul class="sub-menu">
-            <li><a href="certificate.html" class="external">About Us</a></li>
-            <li><a href="courses/courses.html" class="external">Courses</a></li>
-            <li><a href="management-team.html" class="external">Management Team</a></li>
-            <li><a href="departments.html" class="external">Our Departments</a></li>
-            <li><a href="organization-structure.html" class="external">Governing Board of IIPPSA</a></li>
-          </ul>
-        </li>
-        <!-- <li><a href="application.html" class="external">Payment</a></li> -->
-        <li><a href="login-page.php" class="external">Login</a></li>
-        <!-- <li><a href="#section5">Video</a></li> -->
-        <li><a href="contact.html" class="external">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="headerHtml"></div>
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
     <section class="section video" data-section="section5">
@@ -578,65 +552,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
       </div>
     </section>
-    <footer>
-      <br>
-      <br>
-      <div class="container" id="footer-container">
-        <div class="row" id="row">
-          <div class="col-lg-4 col-12">
-            <h5 class="header-footer">ADDRESS</h5>
-            <br>
-            <h6><b>JOS OFFICE:</b></h6>
-            <p>Grace Land International high school Bassa.</p>
-            <h6><b>ABUJA OFFICE:</b></h6>
-            <p>Suite 305, Ebenezer Plaza, Area 1 Garki, FCT Abuja, Nigeria.</p>
-          </div>
-          <div class="col-lg-3 col-12">
-            <ul style="color: white;">
-              <h5 class="header-footer">Management</h5>
-              <li><a href="index.html" style="color: white;">Organisational Structure</a></li>
-              <li><a href="management-team.html" style="color: white;">Management Team</a></li>
-              <li><a href="login-page.php" style="color: white;">Login</a></li>
-            </ul>
-          </div>
-          <br>
-          <div class="col-lg-2 col-12">
-            <ul style="color: white;">
-              <h5 class="header-footer">Useful Links</h5>
-              <li><a href="index.html" style="color: white;">Home</a></li>
-              <li><a href="courses/courses.html" style="color: white;">Courses</a></li>
-              <li><a href="login-page.php" style="color: white;">Login</a></li>
-            </ul>
-          </div>
-          <br>
-          <div class="col-lg-3 col-12">
-            <ul style="color: white;">
-              <h5 class="header-footer">Courses</h5>
-              <li><a href="courses/certificate-course.html" style="color: white;">Certificate Course</a></li>
-              <li><a href="courses/diploma-course.html" style="color: white;">Diploma Course</a></li>
-              <li><a href="courses/advance-diploma-course.html" style="color: white;">Advance Diploma Course</a></li>
-            </ul>
-          </div>
-          
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h5 class="header-footer">Social Links:</h5>
-            <div class="social">
-
-              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-              <a href="https://wa.link/n3va6g" target="_blank" rel="noopener noreferrer"><i
-                  class="fab fa-whatsapp"></i></a>
-            </div>
-            <hr style="border: 1px solid white;">
-            <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored"
-                target="_parent">IIPPS ACADEMY</a></p>
-          </div>
-
-        </div>
-    </footer>
-
+        <div id="footerHtml"></div>
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
