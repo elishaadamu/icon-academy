@@ -141,3 +141,9 @@ section.courses .owl-carousel .owl-dots {
     border-radius: 10px;
     border:1px solid #f5a425;
 }
+footer li{
+    list-style: none;
+}
+footer li a{
+    color: white ;
+}
