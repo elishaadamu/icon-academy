@@ -5,10 +5,11 @@ TemplateMo 557 Grad School
 https://templatemo.com/tm-557-grad-school
 
 */
-
+@import url('./custom.css');
+@import url('./custom-responsive.css');
 
 @import url(fontawesome.css);
-@import url("<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -32,7 +33,7 @@ ul {
 }
 
 p {
-    font-size: 13px;
+    font-size: 19.2px;
     line-height: 22px;
 }
 

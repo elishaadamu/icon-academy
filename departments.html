@@ -7,12 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/department.css">
     <title>Departments</title>
+
+<link rel="stylesheet" href="./assets/css/templatemo-grad-school.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+            $("#headerHtml").load("header.html");
+        });
+        $(function () {
+            $("#footerHtml").load("footer.html");
+        });
+    </script>
 </head>
 
 <body>
+    <div id="headerHtml"></div>
 
     <div class="banner">
-        <h1>Management Team</h1>
+        <h1>Department</h1>
     </div>
 
     <div class="departments">
@@ -51,8 +65,8 @@
             </p>
         </div>
 
-
     </div>
+    <div id="footerHtml"></div>
 
 </body>
 

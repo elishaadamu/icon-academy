@@ -23,8 +23,8 @@ body {
     max-width: 60rem;
     margin: 4rem auto;
     padding: .7rem;
-    box-shadow: 2px 3px 7px 0px #f5a425;
     border-radius: .5rem;
+    box-shadow: 5px 5px 20px rgb(23 8 8);
 
 }
 
@@ -34,8 +34,9 @@ body {
 }
 .departments .department {
     margin: 3rem 0;
+    color: white;
 }
 .department h3 {
     margin-bottom: .5rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
