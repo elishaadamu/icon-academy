@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="assets/images/Screenshot-2023-08-29-125908.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -24,33 +25,19 @@
     <link rel="stylesheet" href="assets/css/organization-structure.css">
 
     <title>Organisation Structure</title>
+    <script>
+      $(function() {
+  $("#footerHtml").load("footer.html");
+});
+$(function() {
+$("#headerHtml").load("header.html");
+});
+ </script>
 </head>
 
 <body>
  <!--header-->
- <header class="main-header clearfix" role="header">
-    <div class="flex-logo">
-      <a href="index.html" class="abbrevate"><img class="logo" width="150px" height="auto" src="assets/images/background-removebg-preview.png" alt=""></a>
-    </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
-    <nav id="menu" class="main-nav" role="navigation">
-      <ul class="main-menu">
-        <li><a href="index.html" class="external">Home</a></li>
-        <!-- <li class="has-submenu"><a href="#section2">About Us</a>
-          <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
-          </ul>
-        </li> -->
-        <!-- <li><a href="application.html" class="external">Payment</a></li> -->
-        <li><a href="login-page.php" class="external">Login</a></li>
-        <!-- <li><a href="#section5">Video</a></li> -->
-        <li><a href="contact.html" class="external">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <div id="headerHtml"></div>
     <div class="banner">
         <h1>Organisation Structure</h1>
     </div>
@@ -119,8 +106,9 @@
                   </table>
             </div>
         </div>
+        <br><br>
         <h2>The Commandant</h2>
-        <p>The Commandant of the National Institute is appointed by the Director General, State Security Service and responsible to the Board for the day to day management of the Institute. He is assisted in managing the daily affairs of the Institute by five Directors (the Director of Research Estimate and Library Services, the Director of Studies, Director of Administration, Director of Technical Services, Director of coordination and liaison services and other Principal Officers who are answerable to him on matters concerning their respective Directorates and Departments.</p>
+        <p>The Commandant of IIPPS Academy is appointed by the Director General, State Security Service and responsible to the Board for the day to day management of the Institute. He is assisted in managing the daily affairs of the Institute by five Directors (the Director of Research Estimate and Library Services, the Director of Studies, Director of Administration, Director of Technical Services, Director of coordination and liaison services and other Principal Officers who are answerable to him on matters concerning their respective Directorates and Departments.)</p>
         <h5>The commandant shall:</h5>
         <div class="row"> 
             <div class="col-12 col-lg-9">
@@ -164,60 +152,7 @@
         </div>
     </div>
     
-    <footer>
-        <br>
-        <br>
-        <div class="container" id="footer-container">
-          <div class="row" id="row">
-            <div class="col-lg-4 col-12">
-              <h5 class="header-footer">ADDRESS</h5>
-                        <br>
-                        <h6><b>JOS OFFICE:</b></h6>
-                        <p>Grace Land International high school Bassa.</p>
-                        <h6><b>ABUJA OFFICE:</b></h6>
-                        <p>Suite 305, Ebenezer Plaza, Area 1 Garki, FCT Abuja, Nigeria.</p>
-            </div>
-            <div class="col-lg-3 col-12">
-              <ul style="color: white;">
-               <h5 class="header-footer">Management</h5>
-               <li><a href="index.html" style="color: white;">Organisational Structure</a></li>
-               <li><a href="leadership.html" style="color: white;">Management Team</a></li>
-              </ul>
-             </div>
-            <div class="col-lg-3 col-12">
-             <ul style="color: white;">
-              <h5 class="header-footer">Courses</h5>
-              <li><a href="index.html" style="color: white;">Home</a></li>
-              <li><a href="courses.html" style="color: white;">Courses</a></li>
-              <li><a href="login-page.php" style="color: white;">Login</a></li>
-             </ul>
-            </div>
-            <br>
-            <div class="col-lg-2 col-12">
-              <ul style="color: white;">
-               <h5 class="header-footer">Useful Links</h5>
-               <li><a href="index.html" style="color: white;">Home</a></li>
-               <li><a href="courses.html" style="color: white;">Courses</a></li>
-               <li><a href="login-page.php" style="color: white;">Login</a></li>
-              </ul>
-             </div>
-          </div> 
-          <div class="row">
-            <div class="col-12">
-              <h5 class="header-footer">Social Links:</h5>
-              <div class="social">
-                
-                  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                  <a href="https://wa.link/n3va6g" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-              </div>
-              <hr style="border: 1px solid white;">
-              <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
-          </div>
-        
-        </div>
-      </footer>
-    
+    <div id="footerHtml"></div>
       <!-- Scripts -->
       <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
