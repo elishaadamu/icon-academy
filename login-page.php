@@ -91,7 +91,7 @@ https://templatemo.com/tm-557-grad-school
         </li>
         <li class="has-submenu"><a href="#section2">Portal</a>
           <ul class="sub-menu">
-            <li><a href="/courses/courses.html" class="external">Courses</a></li>
+            <li><a href="courses.html" class="external">Courses</a></li>
             <li><a href="management-team.html" class="external">Management Team</a></li>
             <li><a href="departments.html" class="external">Our Departments</a></li>
             <li><a href="organization-structure.html" class="external">Organisation Structure</a></li>

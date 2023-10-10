@@ -3,21 +3,21 @@
     color: white;
 }
 .side-design{
-    height: 400px;
+    height: 300px;
     background-color: #f5a425;
     box-shadow: 5px 5px 20px rgb(23, 8, 8);
 
 }
 .main-design{
-    margin-top: 25px;
+    margin-top: 50px;
     border: 1px solid #f5a425;
-    height: 350px;
+    height: 200px;
     text-align: center;
     box-shadow: 5px 5px 20px rgb(23, 8, 8);
     color: white;
 }
 .main-design h3{
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .main-design p{
     text-align: left;

@@ -27,7 +27,12 @@ body {
     gap: 2rem;
     flex-direction: row-reverse;
     margin: 7rem .7rem;
-
+}
+.hero h2{
+    color: white;
+}
+.hero p{
+    color: white;
 }
 
 .hero img {
@@ -65,6 +70,8 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 1.6rem;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .courses {
@@ -95,15 +102,16 @@ section h2 {
 }
 
 .course-info h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: .7rem 0;
-    text-transform: capitalize;
+    text-transform: capitalize !important; 
+    color: #f5a425;
 }
 
 .course-info p {
     font-size: .95rem;
     margin: 1rem 0;
-
+    color: white;
 }
 
 .course-info a {

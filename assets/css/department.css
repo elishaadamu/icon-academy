@@ -18,12 +18,16 @@ body {
     color: #f5a425;
     margin-top: 7rem;
 }
+.banner h1{
+    color: #f5a425;
+}
 
 .departments {
     max-width: 60rem;
     margin: 4rem auto;
     padding: .7rem;
     border-radius: .5rem;
+    border: 1px solid #f5a425;
     box-shadow: 5px 5px 20px rgb(23 8 8);
 
 }
@@ -31,6 +35,7 @@ body {
 .departments h2 {
  margin: 1rem 0;
     font-size: 1.4rem;
+    color: #f5a425;
 }
 .departments .department {
     margin: 3rem 0;
@@ -39,4 +44,5 @@ body {
 .department h3 {
     margin-bottom: .5rem;
     font-size: 1.5rem;
+    color: #f5a425;
 }
