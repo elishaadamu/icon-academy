@@ -54,15 +54,20 @@ $phonenumber = $_POST["phonenumber"];
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    
 <!--
     
 TemplateMo 557 Grad School
@@ -70,6 +75,14 @@ TemplateMo 557 Grad School
 https://templatemo.com/tm-557-grad-school
 
 -->
+<script>
+    $(function() {
+	$("#headerHtml").load("header.html");
+ });
+ $(function() {
+	$("#footerHtml").load("footer.html");
+ });
+</script>
   </head>
 <body>
        <!--header-->
@@ -82,22 +95,16 @@ https://templatemo.com/tm-557-grad-school
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="index.html" class="external">Home</a></li>
-        <li class="has-submenu"><a href="#section2">Apply Courses</a>
+       
+        <li class="has-submenu"><a href="#section2">Portal</a>
           <ul class="sub-menu">
+            <li class="header-courses">Courses</a></li>
             <li><a href="certificate.html" class="external">Certificate Course</a></li>
             <li><a href="diploma.html" class="external">Diploma Course</a></li>
             <li><a href="advanced-diploma.html" class="external">Advanced Diploma Course</a></li>
-          </ul>
-        </li>
-        <li class="has-submenu"><a href="#section2">Portal</a>
-          <ul class="sub-menu">
-            <li><a href="courses.html" class="external">Courses</a></li>
-            <li><a href="management-team.html" class="external">Management Team</a></li>
-            <li><a href="departments.html" class="external">Our Departments</a></li>
-            <li><a href="organization-structure.html" class="external">Organisation Structure</a></li>
-            <li><a href="governing-body.html" class="external">Governing body</a></li>
-            <li><a href="facilities.html" class="external">Facilities</a></li>
-            <li><a href="departments.html" class="external">Departments</a></li>
+            <li><a href="#" class="external">Events</a></li>
+            <li><a href="#" class="external">News</a></li>
+            <li><a href="#" class="external">Books</a></li>
           </ul>
         </li>
         <!-- <li><a href="application.html" class="external">Payment</a></li> -->

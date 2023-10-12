@@ -1,20 +1,9 @@
 .main-menu li .sub-menu {
-    position: absolute;
+
     width: 252px;
-    background-color: #18233a;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s;
+
 }
-.main-menu li .sub-menu li:hover {
-    display: block;
-    line-height: 20px;
-    margin-left: 0px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #121b2f;
-    background-color: rgb(7, 29, 48);
-}
+
 .overlay-text{
     width: 100%;
     height: 200px;
@@ -158,4 +147,20 @@ footer li a{
 .governance .header-governance h3{
     padding: 20px 20px;
     font-weight: bold;
+}
+
+/* management-team */
+.member h4{
+    color: #f5a425;
+}
+.header-courses{
+    color: #f5a425;
+   padding-left: 13px;
+}
+
+@media screen and (max-width: 676px) {
+    .header-courses{
+        color: #f5a425;
+        padding-left: 13px;
+    }
 }

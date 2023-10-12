@@ -267,7 +267,7 @@ a.menu-link { display: none; }
     border-bottom: 1px solid #121b2f;
 }
 
-.main-menu li .sub-menu li:first-child {
+.main-menu li .sub-menu li {
     padding-top: 15px;
 }
 
