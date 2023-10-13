@@ -115,16 +115,7 @@ section h2 {
 }
 
 .course-info a {
-    display: block;
-    padding: .6rem 1rem;
-    border-radius: .4rem;
-    font-weight: bolder;
-    color: white;
-    background: #f5a425;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    width: fit-content;
+
 }
 
 
@@ -157,6 +148,19 @@ section h2 {
     section {
         padding: .5rem;
     }
-
-
 }
+.course-info ol{
+    margin-left: 25px;
+}
+.course-info li::marker{
+    color: #f5a425;
+}
+.course-info a {
+    color: white;
+    text-decoration: none;
+}
+.course-info a:hover {
+    color: #f5a425;
+}
+
+

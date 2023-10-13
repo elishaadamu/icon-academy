@@ -157,6 +157,16 @@ footer li a{
     color: #f5a425;
    padding-left: 13px;
 }
+.member h6{
+    color: #f5a425;
+    font-size: 20px;
+}
+.member ul{
+    list-style: disc;
+}
+.member li::marker{
+    color: #f5a425;
+}
 
 @media screen and (max-width: 676px) {
     .header-courses{
