@@ -171,6 +171,6 @@ footer li a{
 @media screen and (max-width: 676px) {
     .header-courses{
         color: #f5a425;
-        padding-left: 13px;
+        text-align: center;
     }
 }
