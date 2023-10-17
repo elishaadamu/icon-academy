@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url('../images/choosing-bg.jpg') no-repeat center/cover fixed;
+    color: white;
+}
+
+.banner {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/courses-03.jpg') no-repeat center/cover;
+    margin: 2rem 0;
+    color: #f5a425;
+    margin-top: 7rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row-reverse;
+    margin: 7rem .7rem;
+}
+
+.hero h2 {
+    color: white;
+}
+
+.hero p {
+    color: white;
+}
+
+.hero img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.hero>div {
+    width: 30rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+    gap: 2rem;
+    margin: 6rem;
+}
+
+section .offer {
+    border: 1px solid #f5a425;
+    padding: 2rem 1rem;
+    border-radius: .6rem;
+}
+
+.offer ul {
+    margin-left: 1rem;
+}
+
+.offer ul li {
+    list-style-type: disc;
+}
+
+
+
+
+
+
+
+@media (max-width:920px) {
+    .hero img {
+        width: 63%;
+    }
+}
+
+@media (max-width:777px) {
+    .hero {
+        flex-direction: column;
+        margin: 3rem .7rem;
+    }
+
+    .hero>div {
+        width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    section {
+        margin: 2rem 1rem;
+        gap: 1rem;
+    }
+}
