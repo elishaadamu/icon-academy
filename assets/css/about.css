@@ -23,13 +23,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     flex-direction: row-reverse;
     margin: 7rem .7rem;
 }
 
 .hero h2 {
-    color: white;
+    color: #f5a425;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -44,6 +45,7 @@ body {
 
 .hero>div {
     width: 30rem;
+
 }
 
 section {
@@ -58,20 +60,23 @@ section .offer {
     padding: 2rem 1rem;
     border-radius: .6rem;
 }
+.offer h2{
+    color: #f5a425;
+}
 
 .offer ul {
     margin-left: 1rem;
 }
 
 .offer ul li {
-    list-style-type: disc;
+    list-style-type: circle;
+    font-size: 19.2px;
 }
 
-
-
-
-
-
+.offer li::marker{
+    color: #f5a425;
+    font-size: 20px;
+}
 
 @media (max-width:920px) {
     .hero img {

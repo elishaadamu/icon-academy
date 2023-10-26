@@ -72,4 +72,39 @@
         font-size: 22px;
         margin-left: 7px;
     }
+    .modal-header {
+        height: 70px;
+        background-color: #5cb85c;
+        color: rgb(255, 255, 255);
+        border-bottom: 1px solid #f5a425;
+        background-color: #121b2f;
+      }
+      .modal-body {
+        padding: 2px 16px;
+        color: #fefefe;
+        margin-bottom: 50px;
+        width: 100%;
+        display: block;
+        left: 0% !important;
+        }
+        .modal-content span{
+            margin-left: -20px !important;
+            margin-right: 10px;
+            font-size: 1.3rem;
+          }
+          .modal-body p{
+            font-size: 15px;
+          }
+          .modal-content{
+            width: 93% !important;
+          }
+            /* The Close Button */
+  .modal-header .close {
+    color: rgb(255, 255, 255);
+    text-align: right !important;
+    font-size: 60px !important; 
+    font-weight: bold;
+    margin-top: -30px !important;
+  }
+  
 }
