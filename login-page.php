@@ -11,7 +11,7 @@
 $email = $_POST["email"];
 $phonenumber = $_POST["phonenumber"];
 
-    $sql = "SELECT * FROM student_registration WHERE email = '$email' AND phonenumber = '$phonenumber' limit 1 ";
+    $sql = "SELECT * FROM student_registration_t WHERE email = '$email' AND phonenumber = '$phonenumber' limit 1 ";
     
     $result = mysqli_query($conn, $sql);
 

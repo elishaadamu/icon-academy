@@ -10,7 +10,7 @@ if(!$conn){
     echo "Error in connection";
 }
 else{
-    echo "Connection successfull";
+    // echo "Connection successfull";
 }
 
 ?>

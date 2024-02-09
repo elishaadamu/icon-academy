@@ -17,7 +17,8 @@ include 'config.php';
         $_SESSION["expire"] =  $_SESSION['start'] + (3000000);
         while($row = mysqli_fetch_assoc($result)){
           $_SESSION["pnumber"] = $row["phonenumber"];
-          $_SESSION["regnumber"] = $row["id"];     
+          $_SESSION["regnumber"] = $row["id"];
+          $_SESSION["course"] = $row["course"];     
   }
 }
 
@@ -34,7 +35,7 @@ include 'config.php';
     <link rel="shortcut icon" href="assets/images/Screenshot-2023-08-29-125908.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>IIPPS Academy - Download form</title>
+    <title>IIPPS Academy - Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
@@ -55,30 +56,34 @@ include 'config.php';
   </head>
 <body>
        <!--header-->
-  <header class="main-header clearfix" role="header">
-    <div class="logo">
-      <a href="index.html" class="abbrevate"><em>IIPPS</em> Academy</a>
-    <p class="full-name">Icon International Policy and Professional Security Academy</p>
-    </div>
-    
-    <nav id="menu" class="main-nav" role="navigation">
-      <ul class="main-menu">
-        <li><a href="index.html" class="external">Home</a></li>
-        <!-- <li class="has-submenu"><a href="#section2">About Us</a>
-          <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
+       <header class="main-header clearfix" role="header">
+        <div class="flex-logo">
+          <a href="index.html" class="abbrevate"><img class="logo" width="150px" height="auto"
+              src="assets/images/background-removebg-preview.png" alt=""></a>
+        </div>
+        <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+        <nav id="menu" class="main-nav" role="navigation">
+          <ul class="main-menu">
+            <li><a href="index.html" class="external">Home</a></li>
+           
+            <li class="has-submenu"><a href="#section2">Portal</a>
+              <ul class="sub-menu">
+                <li class="header-courses">Courses</a></li>
+                <li><a href="certificate.html" class="external">Certificate Course</a></li>
+                <li><a href="diploma.html" class="external">Diploma Course</a></li>
+                <li><a href="advanced-diploma.html" class="external">Advanced Diploma Course</a></li>
+                <li><a href="#" class="external">Events</a></li>
+                <li><a href="#" class="external">News</a></li>
+                <li><a href="#" class="external">Books</a></li>
+              </ul>
+            </li>
+            <!-- <li><a href="application.html" class="external">Payment</a></li> -->
+            <li><a href="login-page.php" class="external">Login</a></li>
+            <!-- <li><a href="#section5">Video</a></li> -->
+            <li><a href="contact.html" class="external">Contact</a></li>
           </ul>
-        </li> -->
-        <li><a href="application.html" class="external">Payment</a></li>
-        <li><a href="login-page.php" class="external">Login</a></li>
-        <!-- <li><a href="#section5">Video</a></li> -->
-        <li><a href="contact.html" class="external">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        </nav>
+      </header>
 
     <div class="container" id="container">
         <div class="row">
@@ -96,13 +101,12 @@ include 'config.php';
             
             <div class="col-12 col-lg-6" id="reg-number">
               
-                    <?php if( $_SESSION["pnumber"] == $phonenumber){ 
-                    echo '<h6 class="alert alert-info">  Your Registration number is: <b>IIPPSA/01/23/00' . $_SESSION["regnumber"] .  '</b></h6>';
-                    } 
-                    else{
-                      echo  '<h6 class="alert alert-danger">You have not paid tuition fee yet, proceed to payment now.</b></h6>'
-                      ;
-                    }  ?>
+            <?php if (isset($_SESSION["pnumber"]) && $_SESSION["pnumber"] == $phonenumber) { 
+              echo '<h6 class="alert alert-info">Your Registration number is: <b>IIPPSA/01/23/00' . $_SESSION["regnumber"] . '</b></h6>';
+            } else {
+                echo '<h6 class="alert alert-danger">You have not paid tuition fee yet, proceed to payment now.</h6>';
+            } ?>
+
               
               
                 <br>
@@ -119,7 +123,7 @@ include 'config.php';
                 
             </div>
             <div class="col-12 col-lg-6" id="reg-number">
-            <?php  if( $_SESSION["pnumber"] == $phonenumber){
+            <?php  if(isset($_SESSION["pnumber"]) && $_SESSION["pnumber"] == $phonenumber){
               echo '
               <h4>Congratulations, your are now an official student of the academy.</h4>
               <h5 class="alert alert-success"> Your Registration number is: <b>IIPPSA/01/23/00' . $_SESSION["regnumber"]. '</b>'.
@@ -187,9 +191,10 @@ include 'config.php';
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse hide"  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                <?php  if( $_SESSION["pnumber"] == $phonenumber){
+                <?php  if(isset($_SESSION["pnumber"]) && $_SESSION["pnumber"] == $phonenumber){
               echo '
                   <b>1. Tuition fee <span class="badge bg-success">Paid</span></b>
+                  <b>2. Course applied: <span class="badge bg-success">$_SESSION["course"]</span></b>
               ';
             }
               else{ 
@@ -207,15 +212,7 @@ include 'config.php';
         </div>
     </div>            
           
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-        <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
+ 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://js.paystack.co/v1/inline.js"></script> 
