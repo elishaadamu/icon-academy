@@ -9,7 +9,9 @@ body {
     background: url('../images/choosing-bg.jpg') no-repeat center/cover fixed;
     color: white;
 }
-
+.about-us-container h5{
+    font-size: 1.2rem;
+}
 .banner {
     padding: 6rem 0;
     text-align: center;

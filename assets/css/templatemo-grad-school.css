@@ -37,6 +37,9 @@ p {
     line-height: 22px;
 }
 
+.about-us-container h5{
+  font-size: 1.2rem;
+}
 
 .section-heading {
     text-align: center;
