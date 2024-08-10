@@ -138,7 +138,7 @@ https://templatemo.com/tm-557-grad-school
       </div>
   </div>
 </div>
-<footer>
+<footer style="border-top: 1px solid white ;">
     <br>
     <br>
     <div class="container" id="footer-container">
@@ -147,30 +147,32 @@ https://templatemo.com/tm-557-grad-school
           <h5 class="header-footer">ADDRESS</h5>
                     <br>
                     <h6><b>JOS OFFICE:</b></h6>
-                    <p>Grace Land International high school Bassa.</p>
+                    <p>JB House No. 37 Church Street, Jos Plateau State</p>
                     <h6><b>ABUJA OFFICE:</b></h6>
                     <p>Suite 305, Ebenezer Plaza, Area 1 Garki, FCT Abuja, Nigeria.</p>
         </div>
-        <div class="col-lg-3 col-12" style="margin-bottom: 20px;">
-          <h5 class="header-footer">OUR MISSION</h5>
-          <p>IIPPSA's purpose is to define the future of Professional security and Policy.</p>
-          <p>We are guided by a distinct set of values—non-partisanship, independent thought, innovative thinking, cross-disciplinary sponsorship, integrity and professionalism, and talent development.</p>
-        </div>
         <div class="col-lg-2 col-12">
-         <ul style="color: white;">
-          <h5 class="header-footer">Navigation</h5>
-          <li><a href="index.html" style="color: white;">Home</a></li>
-          <li><a href="courses.html" style="color: white;">Courses</a></li>
-          <li><a href="login-page.php" style="color: white;">Login</a></li>
-         </ul>
+          <h5 class="header-footer">About Us</h5>
+          <li><a href="governing-body.html">Board of Governors</a></li>
+          <li><a href="management-team.html">Management Team</a></li>
+          <li><a href="departments.html">Department</a></li>
+          <li><a href="organization-structure.html">Organisation Structure</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
         </div>
         <br>
-        <div class="col-lg-3 col-12">
+        <div class="col-lg-2 col-12">
+          <h5 class="header-footer">Useful Links</h5>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="facilitators.html">Facilitators</a></li>
+        </div>
+        <br>
+        <div class="col-lg-4 col-12">
           <h5 class="header-footer">CONTACT US</h5>
             <h6><b>Contact:</b></h6><p><a href="tel:07062094716">07062094716</a> | <a href="tel:09122749660">09122749660</a></p>
-            <h6><b>E-mail:</b></h6><p><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a></p>
+            <h6><b>E-mail:</b></h6><p><a href="mailto:institute4rsm2023@gmail.com">institute4rsm2023@gmail.com</a></p>
         </div>
-      </div> 
+       
       <div class="row">
         <div class="col-12">
           <h5 class="header-footer">Social Links:</h5>
@@ -181,9 +183,9 @@ https://templatemo.com/tm-557-grad-school
               <a href="https://wa.link/n3va6g" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
           </div>
           <hr style="border: 1px solid white;">
-          <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IIPPS ACADEMY</a></p>
+          <p><i class="fa fa-copyright"></i> Copyright 2023 By <a href="index.html" class="external" rel="sponsored" target="_parent">IRSM</a></p>
       </div>
-    
+      </div>
     </div>
   </footer>
   <script src="vendor/jquery/jquery.min.js"></script>
