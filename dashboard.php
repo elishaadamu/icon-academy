@@ -114,7 +114,7 @@ include 'config.php';
                 <h3 class="instruction">Set of instructions</h3>
                 <ol>
                     <li>Please click on button to download file.</li>
-                    <li>Fill the form manually and send to this email: <b><a href="mailto:iippsa23@gmail.com">iippsa23@gmail.com</a> or contact: <a href="tel:07062094716">07062094716</a></b></li>    
+                    <li>Fill the form manually and send to this email: <b><a href="mailto:institute4rsm2023@gmail.com">institute4rsm2023@gmail.com</a> or contact: <a href="tel:07062094716">07062094716</a></b></li>    
                 </ol>
                 <br>
                 <a class="form" href="./assets/images/ICONINTERNATIONAL.pdf" download=""><button class="btn btn-success">Download File <i class="fas fa-download"></i></button></a>    
