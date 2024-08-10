@@ -949,7 +949,16 @@ section.video .left-content .main-button {
 }
 
 @media screen and (max-width: 767px) {
-
+  section.video {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    padding: 120px 0px;
+    z-index: -10;
+    background-color: rgb(0, 0, 0);
+      
+}
   section.video .left-content {
     margin-bottom: 45px;
   }
@@ -1441,6 +1450,15 @@ img.mfp-img {
   }
 }
 @media all and (max-width: 900px) {
+  section.video {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    padding: 120px 0px;
+    z-index: -10;
+    background-color: rgb(0, 0, 0);    
+}
   .mfp-arrow {
     -webkit-transform: scale(0.75);
     transform: scale(0.75);
@@ -1482,7 +1500,17 @@ section.contact form {
 }
 
 
-@media screen and (max-width: 767px) {  
+@media screen and (max-width: 767px) { 
+  section.video {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    padding: 120px 0px;
+    z-index: -10;
+    background-color: rgb(0, 0, 0);
+      
+} 
   section.contact form {
       margin-bottom: 30px;
   }
@@ -1569,6 +1597,15 @@ footer p a:hover {
 }
 
 @media screen and (max-width: 992px) {
+  section.video {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    padding: 120px 0px;
+    z-index: -10;
+    background-color: rgb(0, 0, 0);    
+}
   .features { background-color: #0c1228; }
   .features-content { position: relative; }
   .features-post { border-left: 0 }
